@@ -1,1 +1,1 @@
-# equity-lab-ISP
+# Equity Lab

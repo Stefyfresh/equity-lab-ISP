@@ -17,7 +17,47 @@ const routes = [
         meta: {
             requiresAuth: false,
         }
-    }
+    },
+    {
+        path: '/about',
+        name: 'about',
+        component: () => import('@/views/About.vue'),
+        meta: {
+            requiresAuth: false,
+        }
+    },
+    {
+        path: '/home',
+        name: 'home',
+        component: () => import('@/views/Home.vue'),
+        meta: {
+            requiresAuth: true,
+        }
+    },
+    {
+        path: '/profile',
+        name: 'profile',
+        component: () => import('@/views/Profile.vue'),
+        meta: {
+            requiresAuth: true,
+        }
+    },
+    {
+        path: '/contact',
+        name: 'contact',
+        component: () => import('@/views/Contact.vue'),
+        meta: {
+            requiresAuth: false,
+        }
+    },
+    {
+        path: '/study',
+        name: 'study',
+        component: () => import('@/views/StudySets.vue'),
+        meta: {
+            requiresAuth: false,
+        }
+    },
 ];
 
 const router = createRouter({

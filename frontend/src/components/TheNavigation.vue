@@ -1,12 +1,10 @@
 <template>
     <nav class="navbar">
         <div class="container">
-            <div class="navbar-brand navbar-height">
-                <h1 class="title">
-                    <RouterLink to="/">
-                        <a class="navbar-item has-text-danger navbar-text has-text-weight-bold">Equity Lab</a>
-                    </RouterLink>
-                </h1>
+            <div class="navbar-brand">
+                <RouterLink to="/">
+                    <img src="/logo-dark.png" class="equity-lab-logo">
+                </RouterLink>
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
                     data-target="navbarBasicExample">
                     <span aria-hidden="true"></span>
@@ -24,9 +22,16 @@
                         </RouterLink>
                     </span>
                     <span class="navbar-item">
-                        <RouterLink to="about">
+                        <RouterLink to="contact">
                             <a class="button is-dark is-inverted">
-                                <span>About</span>
+                                <span>Contact</span>
+                            </a>
+                        </RouterLink>
+                    </span>
+                    <span class="navbar-item">
+                        <RouterLink to="study">
+                            <a class="button is-dark is-inverted">
+                                <span>Study</span>
                             </a>
                         </RouterLink>
                     </span>

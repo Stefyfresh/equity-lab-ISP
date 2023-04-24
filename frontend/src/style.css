@@ -9,6 +9,7 @@
 }
 
 * {
+  /* TODO: CHANGE THIS TO SANS-SERIF WHEN DONE */
   font-family: Lexend, serif;
 }
 
@@ -88,7 +89,8 @@ button:focus-visible {
   }
 
 } */
-
+/* 
+TODO: MAKE THIS WORK 
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #242424;
@@ -101,4 +103,4 @@ button:focus-visible {
   :root {
     background-color: #242424;
   }
-}
+} */

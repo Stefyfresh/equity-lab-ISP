@@ -1,64 +1,39 @@
 <template>
-    <nav class="navbar bg-inherit" role="navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="/">
-                <img src="logo-title.png">
-            </a>
-
-            <!-- TODO: CREATE HAMBURGER MENU FOR MOBILE LAYOUT -->
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a> 
-        </div>
-
-        <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item">
-                    About
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand navbar-height">
+                <h1 class="title"><a class="navbar-item has-text-danger navbar-text has-text-weight-bold"
+                        href="index.html">Equity Lab</a></h1>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
                 </a>
-
-                <a class="navbar-item">
-                    Contact
-                </a>
-
-                <a class="navbar-item">
-                    Study
-                </a>
-
-                <!-- <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                        Study
-                    </a>
-
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item">
-                            About
-                        </a>
-                        <a class="navbar-item">
-                            Jobs
-                        </a>
-                        <a class="navbar-item">
-                            Contact
-                        </a>
-                        <hr class="navbar-divider">
-                        <a class="navbar-item">
-                            Report an issue
-                        </a>
-                    </div>
-                </div> -->
             </div>
-
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <div class="buttons">
-                        <RouterLink :to="{name:'login'}">
-                            <a class="button is-info">
-                                <strong>Sign in</strong>
+            <div id="navbarMenuHeroA" class="navbar-menu topheight">
+                <div class="navbar-end">
+                    <span class="navbar-item">
+                        <RouterLink to="about">
+                            <a class="button is-dark is-inverted" href="landing.html">
+                                <span>About</span>
                             </a>
                         </RouterLink>
-                    </div>
+                    </span>
+                    <span class="navbar-item">
+                        <RouterLink to="about">
+                            <a class="button is-dark is-inverted" href="landing.html">
+                                <span>About</span>
+                            </a>
+                        </RouterLink>
+                    </span>
+                    <span class="navbar-item">
+                        <RouterLink to="login">
+                            <a class="button is-primary is-inverted">
+                                <span>About Us</span>
+                            </a>
+                        </RouterLink>
+                    </span>
                 </div>
             </div>
         </div>

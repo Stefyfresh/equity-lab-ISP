@@ -7,14 +7,14 @@ import TheFooter from '@/components/TheFooter.vue';
    <TheNavigation></TheNavigation>
     <header class="header">
         <section class="section is-medium">
-                <div class="columns">
-                    <div class="column has-text-right">
-                        <h1>Placeholder text</h1>
-                    </div>
-                    <div class="column">
-                        <img src="https://img.redbull.com/images/f_auto/wingfinder/sphere/background">
-                    </div>
+            <div class="columns">
+                <div class="column has-text-right">
+                    <h1 class="title">Placeholder text</h1>
                 </div>
+                <div class="column">
+                    <img src="https://img.redbull.com/images/f_auto/wingfinder/sphere/background">
+                </div>
+            </div>
         </section>
     </header>
     <section class="section is-small has-background-white has-text-centered">

@@ -1,3 +1,7 @@
+<script setup>
+import ProfileSidebar from '@/components/ProfileSidebar.vue';
+</script>
+
 <template>
-    <h1>Login</h1>
+    <ProfileSidebar />
 </template>

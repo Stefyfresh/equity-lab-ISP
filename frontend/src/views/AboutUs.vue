@@ -17,7 +17,7 @@ import TheFooter from '@/components/TheFooter.vue';
                 </div>
         </section>
     </header>
-    <section class="section is-small has-background-white has-text-centered">
+    <!--<section class="section is-small has-background-white has-text-centered">
         <div class="title">What students think about Equity Lab</div>
         <div class="columns">
             <div class="column">
@@ -58,6 +58,6 @@ import TheFooter from '@/components/TheFooter.vue';
                 <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
             </div>
         </div>
-    </section>
+    </section>-->
     <TheFooter></TheFooter>
 </template>

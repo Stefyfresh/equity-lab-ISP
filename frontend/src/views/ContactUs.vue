@@ -1,51 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<script setup>
+import TheNavigation from '@/components/TheNavigation.vue';
+import TheFooter from '@/components/TheFooter.vue';
+</script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="/assets/favicon.ico">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <title>Equity Lab</title>
-</head>
-
-<body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-brand navbar-height">
-                <h1 class="title"><a class="navbar-item has-text-danger navbar-text has-text-weight-bold"
-                        href="index.html">Equity Lab</a></h1>
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                    data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-            <div id="navbarMenuHeroA" class="navbar-menu topheight">
-                <div class="navbar-end">
-                    <span class="navbar-item">
-                        <a class="button is-dark is-inverted" href="landing.html">
-                            <span>Home</span>
-                        </a>
-                    </span>
-                    <span class="navbar-item">
-                        <a class="button is-dark is-inverted" href="index.html">
-                            <span>Index</span>
-                        </a>
-                    </span>
-                    <span class="navbar-item">
-                        <a class="button is-primary is-inverted" href="aboutus.html">
-                            <span>About Us</span>
-                        </a>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <header class="header">
+<template>
+   <TheNavigation></TheNavigation>
+    <!--<header class="header">
         <section class="section is-medium">
                 <div class="columns">
                     <div class="column has-text-right">
@@ -88,7 +48,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <section class="section is-medium">
         <div class="columns">
             <div class="column has-text-right">
@@ -99,13 +59,5 @@
             </div>
         </div>
     </section>
-    <footer class="footer">
-        <div class="content has-text-centered">
-            <p>
-                <strong>Equity Lab</strong><br>Copyright <a href="#">2023</a>
-            </p>
-        </div>
-    </footer>
-</body>
-
-</html>
+    <TheFooter></TheFooter>
+</template>

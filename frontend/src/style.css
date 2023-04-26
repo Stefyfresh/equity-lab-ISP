@@ -20,6 +20,12 @@
   text-align: center;
 }
 
+.equity-lab-logo {
+  height: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 /* a {
   font-weight: 500;
   color: #646cff;
@@ -78,29 +84,18 @@ button:focus-visible {
   background-color: inherit!important;
 }
 
-/* 
-@media (prefers-color-scheme: light) {
-  * {
-    color: inherit;
-  }
 
-  :root {
-    background-color: #fff;
-  }
-
-} */
-/* 
-TODO: MAKE THIS WORK 
+/* TODO: MAKE THIS WORK  */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #242424;
   }
 
-  body * {
+  body p {
     color: #fff!important;
   }
   
   :root {
     background-color: #242424;
   }
-} */
+}

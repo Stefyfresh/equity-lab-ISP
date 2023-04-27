@@ -1,22 +1,60 @@
 <template>
     <div class="columns is-gapless">
         <div class="column is-3">
-            <div class="box">
+            <div class="box profile-sidebar">
                 <aside class="menu is-hidden-mobile">
-                    <h1 class="title">Equity Lab</h1>
-                    <button class="button is-outline">Dashboard</button>
+                    <h1 class="title">
+                        <RouterLink to="/">
+                            <img src="/logo-dark.png" class="equity-lab-logo">
+                        </RouterLink>
+                    </h1>
+                    <div class="card-image has-text-centered block">
+                        <figure class="image is-128x128 is-inline-block">
+                            <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+                        </figure>
+                    </div>
+                    <div class="menu-list">
+                        <span class="navbar-item">
+                            <div class="button is-dark is-inverted is-medium">
+                                <RouterLink to="study">
+                                    <span class="icon is-medium">
+                                        <i class="fa-solid fa-house"></i>
+                                    </span>
+                                    <span>Dashboard</span>
+                                </RouterLink>
+                            </div>
+                        </span>
+                        <span class="navbar-item">
+                            <div class="button is-dark is-inverted is-medium">
+                                <RouterLink to="study">
+                                    <span class="icon is-medium">
+                                        <i class="fa-solid fa-ranking-star"></i>
+                                    </span>
+                                    <span>Leaderboard</span>
+                                </RouterLink>
+                            </div>
+                        </span>
+                        <span class="navbar-item">
+                            <div class="button is-dark is-inverted is-medium">
+                                <RouterLink to="study">
+                                    <span class="icon is-medium">
+                                        <i class="fa-solid fa-user"></i>
+                                    </span>
+                                    <span>Profile</span>
+                                </RouterLink>
+                            </div>
+                        </span>
+                        <span class="navbar-item">
+                            <div class="button is-dark is-inverted is-medium">
+                                    <span class="icon is-medium">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </span>
+                                    <span>More</span>
+                            </div>
+                        </span>
+                    </div>
                     <ul class="menu-list">
-                        <li><a class="">Dashboard</a></li>
-                        <li><a>Customers</a></li>
-                        <li><a>Other</a></li>
-                    </ul>
-                    <p class="menu-label">
-                        Administration
-                    </p>
-                    <ul class="menu-list">
-                        <li><a>Team Settings</a></li>
                         <li>
-                            <a>More</a>
                             <ul>
                                 <li><button class="button is-primary is-inverted">Settings</button></li>
                                 <li><button class="button is-primary is-inverted">Log Out</button></li>

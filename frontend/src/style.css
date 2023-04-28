@@ -26,6 +26,10 @@
   padding-bottom: 10px;
 }
 
+.profile-sidebar {
+  height: 100vh; 
+}
+
 /* a {
   font-weight: 500;
   color: #646cff;

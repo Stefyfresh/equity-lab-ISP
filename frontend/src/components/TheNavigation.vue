@@ -42,6 +42,13 @@
                             </a>
                         </RouterLink>
                     </span>
+                    <span class="navbar-item">
+                        <RouterLink to="login">
+                            <a class="button is-primary is-inverted">
+                                <span>Contact Us</span>
+                            </a>
+                        </RouterLink>
+                    </span>
                 </div>
             </div>
         </div>

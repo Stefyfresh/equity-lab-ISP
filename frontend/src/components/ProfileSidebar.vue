@@ -14,53 +14,62 @@
                         </figure>
                     </div>
                     <div class="menu-list">
-                        <span class="navbar-item">
-                            <div class="button is-dark is-inverted is-medium">
+                        <span class="navbar-item sidebar-item">
+                            <button class="button is-dark is-inverted is-medium">
                                 <RouterLink to="study">
                                     <span class="icon is-medium">
                                         <i class="fa-solid fa-house"></i>
                                     </span>
                                     <span>Dashboard</span>
                                 </RouterLink>
-                            </div>
+                            </button>
                         </span>
-                        <span class="navbar-item">
-                            <div class="button is-dark is-inverted is-medium">
+                        <span class="navbar-item sidebar-item">
+                            <button class="button is-dark is-inverted is-medium">
                                 <RouterLink to="study">
                                     <span class="icon is-medium">
                                         <i class="fa-solid fa-ranking-star"></i>
                                     </span>
                                     <span>Leaderboard</span>
                                 </RouterLink>
-                            </div>
+                            </button>
                         </span>
-                        <span class="navbar-item">
-                            <div class="button is-dark is-inverted is-medium">
+                        <span class="navbar-item sidebar-item">
+                            <button class="button is-dark is-inverted is-medium">
                                 <RouterLink to="study">
                                     <span class="icon is-medium">
                                         <i class="fa-solid fa-user"></i>
                                     </span>
                                     <span>Profile</span>
                                 </RouterLink>
-                            </div>
+                            </button>
                         </span>
-                        <span class="navbar-item">
-                            <div class="button is-dark is-inverted is-medium">
-                                    <span class="icon is-medium">
-                                        <i class="fa-solid fa-ellipsis"></i>
-                                    </span>
-                                    <span>More</span>
+                        <span class="navbar-item sidebar-item">
+                            <div class="dropdown is-hoverable">
+                                <div class="dropdown-trigger">
+                                    <button class="button is-dark is-inverted is-medium" aria-haspopup="true"
+                                        aria-controls="dropdown-menu">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                        </span>
+                                        <span>More</span>
+                                    </button>
+                                </div>
+                                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                    <div class="dropdown-content">
+                                        <div class="dropdown-item">
+                                            <a href="#" class="dropdown-item">
+                                                Settings
+                                            </a>
+                                            <a href="#" class="dropdown-item">
+                                                Sign Out
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </span>
                     </div>
-                    <ul class="menu-list">
-                        <li>
-                            <ul>
-                                <li><button class="button is-primary is-inverted">Settings</button></li>
-                                <li><button class="button is-primary is-inverted">Log Out</button></li>
-                            </ul>
-                        </li>
-                    </ul>
                 </aside>
             </div>
         </div>

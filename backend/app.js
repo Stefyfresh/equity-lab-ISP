@@ -1,8 +1,8 @@
 // jshint esversion:8
 const Express = require("express");
-const { createLogger, format, transports, log } = require('winston');
+const { createLogger, format, transports } = require('winston');
 const BodyParser = require("body-parser");
-const { MongoClient, ServerApiVersion, Collection } = require('mongodb');
+const { MongoClient, ServerApiVersion } = require('mongodb');
 const uri = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@${process.env.MONGO_URL}/?retryWrites=true&w=majority&compressors=snappy,zlib`;
 
 const DB_NAME = 'data';
@@ -12,12 +12,12 @@ const ROUTES = [ 'students', 'teachers', 'classes', 'scientists', 'study-sets' ]
 const logger = createLogger({
     level: 'debug',
     format: format.combine(
-        format.timestamp({ format: "YYYY-MM-DD HH:mm:ss.SSS" }),
+        // format.timestamp({ format: "YYYY-MM-DD HH:mm:ss.SSS" }),
         format.errors({ stack: true }),
         format.splat(),
         format.colorize(),
         format.printf(({ level, message, timestamp }) => {
-            return `${timestamp} ${level}: ${message}`;
+            return `${level}: ${message}`;
         }),
     ),
     transports: [
@@ -25,10 +25,10 @@ const logger = createLogger({
     ]
 });
 
-function logRequest(req, res, next) {
-    logger.debug(`Request: ${req.url} from ${req.ip}`);
-    next();
-}
+// function logRequest(req, res, next) {
+//     logger.debug(`Request: ${req.url} from ${req.ip}`);
+//     next();
+// }
 
 function logReqErr(err, req, res, next) {
     logger.error(`Request error: ${err}`);
@@ -40,7 +40,7 @@ function logReqErr(err, req, res, next) {
 const app = Express();
 app.use(BodyParser.json());
 app.use(BodyParser.urlencoded({ extended: true }));
-app.use(logRequest);
+// app.use(logRequest);
 app.use(logReqErr);
 app.listen(5000, () => {
     logger.info("Started Express server.");

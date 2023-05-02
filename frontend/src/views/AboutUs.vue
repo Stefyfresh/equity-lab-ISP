@@ -17,6 +17,16 @@ import TheFooter from '@/components/TheFooter.vue';
                 </div>
         </section>
     </header>
+    <section class="container">
+        <div class="columns">
+            <div class="column is-two-thirds">
+                <p>Hello</p>
+            </div>
+            <div class="column">
+                <p>Hello 2</p>
+            </div>
+        </div>
+    </section>
     <!--<section class="section is-small has-background-white has-text-centered">
         <div class="title">What students think about Equity Lab</div>
         <div class="columns">
@@ -61,3 +71,4 @@ import TheFooter from '@/components/TheFooter.vue';
     </section>-->
     <TheFooter></TheFooter>
 </template>
+

@@ -6,16 +6,16 @@ import TheFooter from '@/components/TheFooter.vue';
 <template>
    <TheNavigation></TheNavigation>
     <header class="header">
-        <section class="section is-medium">
-                <div class="columns">
-                    <div class="column has-text-right">
-                        <h1>Placeholder text</h1>
-                    </div>
-                    <div class="column">
-                        <img src="https://img.redbull.com/images/f_auto/wingfinder/sphere/background">
-                    </div>
-                </div>
-        </section>
+        <div class="container is-fullhd"> 
+        <figure class="image is-fullwidth">
+            <img src="../../public/aboutus.jpg">
+        </figure>
+    </div>
+
+        <!--<section class="section is-medium">
+              
+            
+        </section>-->
     </header>
     <section class="container">
         <div class="columns">
@@ -71,4 +71,10 @@ import TheFooter from '@/components/TheFooter.vue';
     </section>-->
     <TheFooter></TheFooter>
 </template>
+
+<style>
+    .container img{
+        max-height: 300px;
+    }
+</style>
 

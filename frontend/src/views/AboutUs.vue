@@ -8,7 +8,7 @@ import TheFooter from '@/components/TheFooter.vue';
     <header class="header">
         <div class="container is-fullhd"> 
         <figure class="image is-fullwidth">
-            <img src="../../public/aboutus.jpg">
+            <img src="/images/aboutus.jpg">
         </figure>
     </div>
 

@@ -5,7 +5,7 @@
                 <aside class="menu is-hidden-mobile">
                     <h1 class="title">
                         <RouterLink to="/">
-                            <img src="/logo-dark.png" class="equity-lab-logo">
+                            <img src="/images/logo-dark.png" class="equity-lab-logo">
                         </RouterLink>
                     </h1>
                     <div class="card-image has-text-centered block">

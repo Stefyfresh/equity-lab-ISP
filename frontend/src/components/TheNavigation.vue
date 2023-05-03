@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar">
+    <nav class="navbar" id="main-nav">
         <div class="container">
             <div class="navbar-brand">
                 <RouterLink to="/">

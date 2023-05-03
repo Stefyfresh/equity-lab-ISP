@@ -61,7 +61,8 @@
                                             <a href="#" class="dropdown-item">
                                                 Settings
                                             </a>
-                                            <a href="#" class="dropdown-item">
+                                            <!-- TODO: Maybe extract to component? -->
+                                            <a class="dropdown-item" @click="handleLogout">
                                                 Sign Out
                                             </a>
                                         </div>
@@ -75,3 +76,16 @@
         </div>
     </div>
 </template>
+
+<script setup>
+import { useAuth0 } from "@auth0/auth0-vue";
+
+const { logout } = useAuth0();
+
+const handleLogout = () =>
+    logout({
+        logoutParams: {
+            returnTo: window.location.origin,
+        }
+    });
+</script>

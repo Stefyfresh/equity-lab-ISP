@@ -1,7 +1,7 @@
 <script setup>
-import ProfileSidebar from '@/components/ProfileSidebar.vue';
+import LoginSidebar from '@/components/LoginSidebar.vue'
 </script>
 
 <template>
-    <ProfileSidebar />
+    <LoginSidebar></LoginSidebar>
 </template>

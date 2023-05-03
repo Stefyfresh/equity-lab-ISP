@@ -1,3 +1,7 @@
+<script setup>
+import AccountButton from '@/components/buttons/AccountButton.vue';
+</script>
+
 <template>
     <nav class="navbar" id="main-nav">
         <div class="container">
@@ -37,17 +41,13 @@
                     </span>
                     <span class="navbar-item">
                         <RouterLink to="login">
-                            <a class="button is-primary is-inverted">
-                                <span>Log In</span>
+                            <a class="button is-dark is-inverted">
+                                <span>Contact Us</span>
                             </a>
                         </RouterLink>
                     </span>
                     <span class="navbar-item">
-                        <RouterLink to="login">
-                            <a class="button is-primary is-inverted">
-                                <span>Contact Us</span>
-                            </a>
-                        </RouterLink>
+                        <AccountButton></AccountButton>
                     </span>
                 </div>
             </div>

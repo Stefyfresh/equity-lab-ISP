@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "@auth0/auth0-vue": "^2.2.0",
+    "bulma": "^0.9.4",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
+    "node-sass": "^8.0.0",
     "vite": "^4.2.0"
   }
 }

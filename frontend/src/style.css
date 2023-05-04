@@ -1,4 +1,4 @@
-:root {
+/* :root {
   color-scheme: light dark;
 
   font-synthesis: none;
@@ -6,19 +6,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-}
+} */
 
 * {
   /* TODO: CHANGE THIS TO SANS-SERIF WHEN DONE */
   font-family: Lexend, serif;
 }
 
-#app {
-  /* max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem; */
-  text-align: center;
-}
 
 .equity-lab-logo {
   height: 60px;
@@ -98,7 +92,7 @@ button:focus-visible {
 
 
 /* TODO: MAKE THIS WORK  */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   body {
     background-color: #242424;
   }
@@ -110,4 +104,4 @@ button:focus-visible {
   :root {
     background-color: #242424;
   }
-}
+} */

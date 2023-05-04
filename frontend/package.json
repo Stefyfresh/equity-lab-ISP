@@ -6,16 +6,19 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "css-build": "node-sass --omit-source-map-url src/sass --output public/css",
+    "css-test": "node-sass -?",
+    "css-watch": "npm run css-build -- --watch"
   },
   "dependencies": {
     "@auth0/auth0-vue": "^2.2.0",
-    "bulma": "^0.9.4",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
+    "bulma": "^0.9.4",
     "node-sass": "^8.0.0",
     "vite": "^4.2.0"
   }

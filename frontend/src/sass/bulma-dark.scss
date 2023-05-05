@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-// Bulma Colors
+// Bulma Colours
 $black:        hsl(0, 0%, 4%) !default;
 $black-bis:    hsl(0, 0%, 7%) !default;
 $black-ter:    hsl(0, 0%, 14%) !default;
@@ -26,17 +26,17 @@ $purple:       hsl(271, 100%, 71%) !default;
 $red:          hsl(348, 86%, 61%) !default;
 
 
-
+// Colours
 $primary: $turquoise;
 $link: $blue;
 $info: $cyan;
 $success: $green;
 $warning: $yellow;
 $danger: $red;
-$dark: $grey-darker;
-$text: $grey-dark;
 
-
+// Main scheme
+$light: $grey-darker;
+$dark: $white-ter;
 
 $scheme-main: $black;
 $scheme-main-bis: $black-bis;
@@ -51,5 +51,13 @@ $text-light: $white;
 $text-strong: $white;
 $text-invert: $white;
 
+// Inverts
+$primary-invert: $black;
+$info-invert: $black;
+$success-invert: $black;
+$warning-invert: $black;
+$danger-invert: $black;
+$light-invert: $black;
+$dark-invert: $black;
 
 @import "../../node_modules/bulma/bulma.sass";

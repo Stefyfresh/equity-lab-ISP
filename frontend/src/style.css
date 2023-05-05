@@ -11,6 +11,7 @@
 * {
   /* TODO: CHANGE THIS TO SANS-SERIF WHEN DONE */
   font-family: Lexend, serif;
+  transition: background-color 0.4s;
 }
 
 

@@ -8,7 +8,6 @@
     "build": "vite build",
     "preview": "vite preview",
     "css-build": "node-sass --omit-source-map-url src/sass --output public/css",
-    "css-test": "node-sass -?",
     "css-watch": "npm run css-build -- --watch"
   },
   "dependencies": {

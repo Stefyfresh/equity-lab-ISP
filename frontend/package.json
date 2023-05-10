@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "css-build": "node-sass --omit-source-map-url src/sass --output public/css",
-    "css-watch": "npm run css-build -- --watch"
+    "css-build": "node-sass -x src/sass/ --output public/css",
+    "css-watch": "node-sass -x src/sass/ --output public/css --include-path sass --watch"
   },
   "dependencies": {
     "@auth0/auth0-vue": "^2.2.0",

@@ -7,7 +7,10 @@ import AccountButton from '@/components/buttons/AccountButton.vue';
         <div class="container">
             <div class="navbar-brand">
                 <RouterLink to="/">
-                    <img src="/images/logo-dark.png" class="equity-lab-logo">
+                    <picture>
+                        <source srcset="/images/logo-light.png" media="(prefers-color-scheme: dark)" class="equity-lab-logo">
+                        <img src="/images/logo-dark.png" class="equity-lab-logo">
+                    </picture>
                 </RouterLink>
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
                     data-target="navbarBasicExample">

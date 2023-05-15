@@ -6,7 +6,8 @@
                     <h1 class="title">
                         <RouterLink to="/">
                             <picture>
-                                <source srcset="/images/logo-light.png" media="(prefers-color-scheme: dark)" class="equity-lab-logo">
+                                <source srcset="/images/logo-light.png" media="(prefers-color-scheme: dark)"
+                                    class="equity-lab-logo">
                                 <img src="/images/logo-dark.png" class="equity-lab-logo">
                             </picture>
                         </RouterLink>
@@ -69,10 +70,10 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </span>
-                </div>
-            </aside>
+                        </span>
+                    </div>
+                </aside>
+            </div>
         </div>
     </div>
 </template>

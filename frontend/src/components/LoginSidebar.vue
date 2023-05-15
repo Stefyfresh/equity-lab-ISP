@@ -6,11 +6,18 @@
                     src="https://images.pexels.com/photos/4709293/pexels-photo-4709293.jpeg?auto=compress&cs=tinysrgb&w=800">
             </figure>
         </div>
+        
         <div class="column is-6">
             <div class="column is-10 is-offset-1">
             <div class="box profile-sidebar">
                 <aside class="menu is-hidden-mobile">
+
+                    <!-- TODO: Make this look waaaaay better -->
                     <div class="field">
+                        <label class="label">Log In</label>
+                        <button class="button" @click="handleLogin">Student Login</button>
+                    </div>
+                    <!-- <div class="field">
                         <label class="label">Username</label>
                         <div class="control">
                             <input class="input" type="text" placeholder="Text input">
@@ -93,10 +100,24 @@
                         <div class="control">
                             <button class="button is-link is-light">Cancel</button>
                         </div>
-                    </div>
+                    </div> -->
                 </aside>
             </div>
         </div>
         </div>
     </div>
 </template>
+
+<script setup>
+import { useAuth0 } from "@auth0/auth0-vue";
+
+const { loginWithRedirect } = useAuth0();
+
+const handleLogin = () => {
+    loginWithRedirect({
+        appState: {
+            target: "/profile",
+        },
+    });
+};
+</script>

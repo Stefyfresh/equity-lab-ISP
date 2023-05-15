@@ -1,75 +1,59 @@
 /* jshint esversion: 11 */
 import { createRouter, createWebHistory } from 'vue-router';
+import { authGuard } from "@auth0/auth0-vue";
 
 const routes = [
     {
         path: '/',
         name: 'landing',
         component: () => import('@/views/Landing.vue'),
-        meta: {
-            requiresAuth: false,
-        }
     },
     {
         path: '/login',
         name: 'login',
         component: () => import('@/views/Login.vue'),
-        meta: {
-            requiresAuth: false,
-        }
     },
     {
         path: '/about',
         name: 'about',
         component: () => import('@/views/AboutUs.vue'),
-        meta: {
-            requiresAuth: false,
-        }
     },
     {
         path: '/home',
         name: 'home',
         component: () => import('@/views/Home.vue'),
-        meta: {
-            requiresAuth: true,
-        }
     },
     {
         path: '/profile',
         name: 'profile',
         component: () => import('@/views/Profile.vue'),
-        meta: {
-            requiresAuth: true,
-        }
+        beforeEnter: authGuard,
     },
     {
         path: '/contact',
         name: 'contact',
-        component: () => import('@/views/Contact.vue'),
-        meta: {
-            requiresAuth: false,
-        }
+        component: () => import('@/views/ContactUs.vue'),
     },
     {
         path: '/study',
         name: 'study',
         component: () => import('@/views/StudySets.vue'),
-        meta: {
-            requiresAuth: false,
-        }
+    },
+    {
+        path: '/callback',
+        name: 'callback',
+        component: () => import('@/views/Callback.vue'),
+    },
+    {
+        path: "/:catchAll(.*)",
+        name: "Not Found",
+        component: () => import('@/views/404NotFound.vue'),
     },
 ];
 
 const router = createRouter({
     history: createWebHistory(),
     routes
-});
-
-router.beforeEach((to, from) => {
-    if (to.meta.requiresAuth && !window.user) {
-        //must log in
-        return {name: 'login', query: {redirect: to.fullPath}};
-    }
 });
 
 export default router;

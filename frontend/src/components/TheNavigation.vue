@@ -1,9 +1,16 @@
+<script setup>
+import AccountButton from '@/components/buttons/AccountButton.vue';
+</script>
+
 <template>
-    <nav class="navbar">
+    <nav class="navbar" id="main-nav">
         <div class="container">
             <div class="navbar-brand">
                 <RouterLink to="/">
-                    <img src="/logo-dark.png" class="equity-lab-logo">
+                    <picture>
+                        <source srcset="/images/logo-light.png" media="(prefers-color-scheme: dark)" class="equity-lab-logo">
+                        <img src="/images/logo-dark.png" class="equity-lab-logo">
+                    </picture>
                 </RouterLink>
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
                     data-target="navbarBasicExample">
@@ -37,17 +44,13 @@
                     </span>
                     <span class="navbar-item">
                         <RouterLink to="login">
-                            <a class="button is-primary is-inverted">
-                                <span>Log In</span>
+                            <a class="button is-dark is-inverted">
+                                <span>Contact Us</span>
                             </a>
                         </RouterLink>
                     </span>
                     <span class="navbar-item">
-                        <RouterLink to="login">
-                            <a class="button is-primary is-inverted">
-                                <span>Contact Us</span>
-                            </a>
-                        </RouterLink>
+                        <AccountButton></AccountButton>
                     </span>
                 </div>
             </div>

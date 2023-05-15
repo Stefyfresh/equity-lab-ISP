@@ -1,13 +1,11 @@
 <script setup>
 import { useAuth0 } from "@auth0/auth0-vue";
+import Loading from "./views/Loading.vue";
 
 const { isLoading } = useAuth0();
 </script>
 <template>
-  <div v-if="isLoading">
-    <!-- TODO: Make clever loading animation -->
-    <h1 class="title" style="margin-top: 30vh;">Da page be loadin</h1> 
-  </div>
+  <Loading v-if="isLoading"></Loading>
   <RouterView v-else></RouterView>
 </template>
 

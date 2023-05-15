@@ -42,7 +42,7 @@ const routes = [
     {
         path: '/callback',
         name: 'callback',
-        component: () => import('@/views/Callback.vue'),
+        component: () => import('@/views/Loading.vue'),
     },
     {
         path: "/:catchAll(.*)",

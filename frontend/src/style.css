@@ -30,8 +30,12 @@
   height: 100vh; 
 }
 
-.sidebar-item {
-  width: 100%;
+.inside-profile-sidebar {
+  padding-top: 20px;
+}
+
+.main-panel {
+  padding-top: 80px;
 }
 
 /* a {

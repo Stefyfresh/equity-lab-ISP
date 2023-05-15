@@ -3,5 +3,8 @@ import ProfileSidebar from '@/components/ProfileSidebar.vue';
 </script>
 
 <template>
-    <ProfileSidebar />
+    <div class="columns is-gapless">
+        <ProfileSidebar />
+        <div class="column is-9"></div>
+    </div>
 </template>

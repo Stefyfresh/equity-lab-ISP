@@ -1,3 +1,3 @@
 <template>
-   <h1 class="title">Da page be loadin</h1>
+   <h1 class="title">The page be loading</h1>
 </template>

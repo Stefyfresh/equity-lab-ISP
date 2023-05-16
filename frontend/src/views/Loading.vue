@@ -1,3 +1,7 @@
 <template>
-   <h1 class="title">The page be loading</h1>
+   <div class="has-text-centered">
+      <figure class="image is-inline-block is-256x256">
+         <img src="https://i.gifer.com/DuZY.gif">
+      </figure>
+   </div>
 </template>

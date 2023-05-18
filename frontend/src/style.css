@@ -37,3 +37,11 @@
 .is-404 {
   font-size: 300px;
 }
+
+.loading-columns{
+  height: 100vh;
+}
+
+.loading-columns img{
+  height: 50vh;
+}

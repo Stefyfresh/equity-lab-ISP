@@ -1,7 +1,12 @@
 <template>
-   <div class="has-text-centered">
-      <figure class="image is-inline-block is-256x256">
-         <img src="https://i.gifer.com/DuZY.gif">
-      </figure>
+   <div class="columns is-vertical is-vcentered loading-columns is-mobile">
+      <div class="column">
+         <div class="has-text-centered">
+            <figure class="image is-inline-block is-256x256">
+               <img src="/images/loading.gif">
+            </figure>
+         </div>
+
+      </div>
    </div>
 </template>

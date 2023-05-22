@@ -3,7 +3,7 @@
         <div class="column is-3">
             <div class="box profile-sidebar">
                 <aside class="menu is-hidden-mobile">
-                    <h1 class="title">
+                    <div class="has-text-centered block">
                         <RouterLink to="/">
                             <picture>
                                 <source srcset="/images/logo-light.png" media="(prefers-color-scheme: dark)"
@@ -11,7 +11,7 @@
                                 <img src="/images/logo-dark.png" class="equity-lab-logo">
                             </picture>
                         </RouterLink>
-                    </h1>
+                    </div>
                     <div class="card-image has-text-centered block">
                         <figure class="image is-128x128 is-inline-block">
                             <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">

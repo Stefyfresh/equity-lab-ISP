@@ -55,7 +55,7 @@ import TheFooter from '@/components/TheFooter.vue';
 
 #showcase .bg-image{
     position: absolute;
-    background:url('../../public/images/aboutus.jpg') no-repeat center;
+    background:url('/images/aboutus.webp') no-repeat center;
     background-size:cover;
     width:100%;
     height: 600px;

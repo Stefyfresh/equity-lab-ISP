@@ -6,9 +6,9 @@
                     <div class="has-text-centered block">
                         <RouterLink to="/">
                             <picture>
-                                <source srcset="/images/logo-light.png" media="(prefers-color-scheme: dark)"
+                                <source srcset="/images/logo-light.webp" media="(prefers-color-scheme: dark)"
                                     class="equity-lab-logo">
-                                <img src="/images/logo-dark.png" class="equity-lab-logo">
+                                <img src="/images/logo-dark.webp" class="equity-lab-logo">
                             </picture>
                         </RouterLink>
                     </div>

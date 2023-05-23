@@ -8,13 +8,13 @@
                             <picture>
                                 <source srcset="/images/logo-light.webp" media="(prefers-color-scheme: dark)"
                                     class="equity-lab-logo">
-                                <img src="/images/logo-dark.webp" class="equity-lab-logo">
+                                <img src="/images/logo-dark.webp" alt="" class="equity-lab-logo">
                             </picture>
                         </RouterLink>
                     </div>
                     <div class="card-image has-text-centered block">
                         <figure class="image is-128x128 is-inline-block">
-                            <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+                            <img class="is-rounded" alt="" src="https://bulma.io/images/placeholders/128x128.png">
                         </figure>
                     </div>
                     <div class="menu-list">

@@ -33,19 +33,19 @@
                     <div class="column is-one-fifth is-offset-three-fifths">
                         <div class="columns">
                             <div class="column">
-                                <a href="https://facebook.com"><i class="fa-brands fa-facebook-f fa-xl"></i></a>
+                                <a href="https://facebook.com" aria-label="Facebook"><i class="fa-brands fa-facebook-f fa-xl"></i></a>
                             </div>
                             <div class="column">
-                                <a href="https://twitter.com"><i class="fa-brands fa-twitter fa-xl"></i></a>
+                                <a href="https://twitter.com" aria-label="Twitter"><i class="fa-brands fa-twitter fa-xl"></i></a>
                             </div>
                             <div class="column">
-                                <a href="https://instagram.com"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                                <a href="https://instagram.com" aria-label="Instagram"><i class="fa-brands fa-instagram fa-xl"></i></a>
                             </div>
                             <div class="column">
-                                <a href="https://discord.com"><i class="fa-brands fa-discord fa-xl"></i></a>
+                                <a href="https://discord.com" aria-label="Discord"><i class="fa-brands fa-discord fa-xl"></i></a>
                             </div>
                             <div class="column">
-                                <a href="https://web.dev/googleplus"><i class="fa-brands fa-google-plus-g fa-xl"></i></a>
+                                <a href="https://web.dev/googleplus" aria-label="Google Plus"><i class="fa-brands fa-google-plus-g fa-xl"></i></a>
                             </div>
                         </div>
                     </div>

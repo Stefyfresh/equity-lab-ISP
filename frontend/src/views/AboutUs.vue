@@ -22,7 +22,7 @@ import TheFooter from '@/components/TheFooter.vue';
         <div class="columns">
             <div class="column">
                 <figure class="image is-128x128">
-                    <img src="https://bulma.io/images/placeholders/128x128.png">
+                    <img alt="" src="https://bulma.io/images/placeholders/128x128.png">
                 </figure>
             </div>
             <div class="column is-two-thirds is-flex is-align-items-center">

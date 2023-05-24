@@ -29,13 +29,6 @@ import AccountButton from '@/components/buttons/AccountButton.vue';
                         </RouterLink>
                     </span>
                     <span class="navbar-item">
-                        <RouterLink to="contact">
-                            <button class="button is-dark is-inverted">
-                                <span>Contact</span>
-                            </button>
-                        </RouterLink>
-                    </span>
-                    <span class="navbar-item">
                         <RouterLink to="study">
                             <button class="button is-dark is-inverted">
                                 <span>Study</span>
@@ -43,9 +36,9 @@ import AccountButton from '@/components/buttons/AccountButton.vue';
                         </RouterLink>
                     </span>
                     <span class="navbar-item">
-                        <RouterLink to="login">
+                        <RouterLink to="contact">
                             <button class="button is-dark is-inverted">
-                                <span>Contact Us</span>
+                                <span>Contact</span>
                             </button>
                         </RouterLink>
                     </span>

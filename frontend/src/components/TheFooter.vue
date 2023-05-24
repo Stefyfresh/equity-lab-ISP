@@ -15,22 +15,13 @@
                     <div class="block">Our Mission</div>
                     <ul>
                         <li>
-                            <RouterLink to="/">
-
-                                <a>Landing</a>
-                            </RouterLink>
+                            <RouterLink to="/">Landing</RouterLink>
                         </li>
                         <li>
-                            <RouterLink to="about">
-
-                                <a>About Us</a>
-                            </RouterLink>
+                            <RouterLink to="about">About Us</RouterLink>
                         </li>
                         <li>
-                            <RouterLink to="contact">
-
-                                <a>Contact Us</a>
-                            </RouterLink>
+                            <RouterLink to="contact">Contact Us</RouterLink>
                         </li>
                     </ul>
                 </div>
@@ -38,22 +29,13 @@
                     <div class="block">Get Studying</div>
                     <ul>
                         <li>
-                            <RouterLink to="login">
-
-                                <a>Log In</a>
-                            </RouterLink>
+                            <RouterLink to="login">Log In</RouterLink>
                         </li>
                         <li>
-                            <RouterLink to="study">
-
-                                <a>Study</a>
-                            </RouterLink>
+                            <RouterLink to="study">Study</RouterLink>
                         </li>
                         <li>
-                            <RouterLink to="study">
-
-                                <a>Games</a>
-                            </RouterLink>
+                            <RouterLink to="study">Games</RouterLink>
                         </li>
                     </ul>
                 </div>

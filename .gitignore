@@ -3,4 +3,4 @@ node_modules
 *_old
 .env
 */local/*
-*/public/css/colors.css
+*/public/css/*

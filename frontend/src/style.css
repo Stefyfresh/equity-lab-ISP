@@ -38,6 +38,10 @@
   font-size: 300px;
 }
 
+.profile-section {
+  padding: 4rem 5rem;
+}
+
 .loading-columns{
   height: 100vh;
 }

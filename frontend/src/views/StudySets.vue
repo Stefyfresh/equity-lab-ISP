@@ -23,7 +23,7 @@ const sets = ref(sourceData.sets);
         :to="{name: set.show, params:{id: set.id, slug: set.slug}}"
       >
       <h2>{{ set.name }}</h2>
-      <img :src="`../../public/images/${set.image}`" :alt="set.name">
+      <img :src="`/images/${set.image}`" :alt="set.name">
     </router-link>
     </div>
     

@@ -16,8 +16,9 @@ const emojis = "\\(^\u0414^)/ (\u0387.\u0387) (\u02da\u0394\u02da)b (\u0387_\u03
                         </h1>
                         <h1 class="title">Page not found</h1>
                         <h1 class="subtitle">We couldn't find that page for you!</h1>
-                        <RouterLink to=""></RouterLink>
-                        <h1>&lt; Return to Equity Lab</h1>
+                        <RouterLink to="/">
+                            <h1>&lt; Return to Equity Lab</h1>
+                        </RouterLink>
                     </div>
                 </div>
             </div>

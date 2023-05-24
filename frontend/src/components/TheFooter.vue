@@ -14,17 +14,47 @@
                 <div class="column has-text-left">
                     <div class="block">Our Mission</div>
                     <ul>
-                        <li><a href="#">Landing</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li>
+                            <RouterLink to="/">
+
+                                <a>Landing</a>
+                            </RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="about">
+
+                                <a>About Us</a>
+                            </RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="contact">
+
+                                <a>Contact Us</a>
+                            </RouterLink>
+                        </li>
                     </ul>
                 </div>
                 <div class="column has-text-left">
                     <div class="block">Get Studying</div>
                     <ul>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Study</a></li>
-                        <li><a href="#">Games</a></li>
+                        <li>
+                            <RouterLink to="login">
+
+                                <a>Log In</a>
+                            </RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="study">
+
+                                <a>Study</a>
+                            </RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="study">
+
+                                <a>Games</a>
+                            </RouterLink>
+                        </li>
                     </ul>
                 </div>
             </div>

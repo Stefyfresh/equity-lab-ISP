@@ -14,7 +14,7 @@
                     </div>
                     <div class="card-image has-text-centered block">
                         <figure class="image is-128x128 is-inline-block">
-                            <img class="is-rounded" alt="" src="https://bulma.io/images/placeholders/128x128.png">
+                            <img class="is-rounded" alt="" src="/images/128x128.webp">
                         </figure>
                     </div>
                     <div class="menu-list">

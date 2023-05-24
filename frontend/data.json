@@ -1,0 +1,25 @@
+{
+    "sets": [
+        {
+            "subject": "Chemistry",
+            "slug": "Chemistry",
+            "image": "chemistry.jpg",
+            "id": 1,
+            "description": "blah blah blah Chemistry blah blah blag fill in blahs",
+            "cards": [
+                {
+                    "person": "Marie Curie",
+                    "slug": "Marie Curie",
+                    "image": "mariecurie.jpg",
+                    "description": "Marie Curie was the first woman to win a noble prize and the first person to win two. She won one in chemistry in 1903 and one in physics in 1911.",
+                    "questions":[
+                        {
+                            "question": "blah",
+                            "answer": "blah blah"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

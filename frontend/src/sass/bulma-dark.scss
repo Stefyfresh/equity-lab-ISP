@@ -41,7 +41,9 @@ $scheme-main-ter: $black-ter;
 $scheme-invert: $white;
 $scheme-invert-bis: $white-bis;
 $scheme-invert-ter: $white-ter;
+
 $body-background-color: $black;
+$background: bulmaDarken($scheme-main, 5%);
 
 // Object colours
 $border: $grey-darker;

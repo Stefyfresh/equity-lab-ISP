@@ -3,7 +3,10 @@
       <div class="column">
          <div class="has-text-centered">
             <figure class="image is-inline-block is-256x256">
-               <img src="/images/loading.gif">
+               <!-- <img src="/images/loading2.gif"> -->
+               <video autoplay loop muted playsinline>
+                  <source src="/images/loading.webm" type="video/webm"/>
+               </video>
             </figure>
          </div>
 

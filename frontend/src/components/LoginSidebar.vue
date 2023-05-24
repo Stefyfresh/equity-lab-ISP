@@ -2,8 +2,7 @@
     <div class="columns is-gapless">
         <div class="column is-6">
             <figure class="image is-inline-block">
-                <img
-                    src="https://images.pexels.com/photos/4709293/pexels-photo-4709293.jpeg?auto=compress&cs=tinysrgb&w=800">
+                <img alt="" src="https://images.pexels.com/photos/4709293/pexels-photo-4709293.jpeg?auto=compress&cs=tinysrgb&w=800">
             </figure>
         </div>
 

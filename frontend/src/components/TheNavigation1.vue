@@ -2,7 +2,7 @@
     <nav class="navbar bg-inherit" role="navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="/">
-                <img src="/images/logo-title.png">
+                <img alt="" src="/images/logo-title.png">
             </a>
 
             <!-- TODO: CREATE HAMBURGER MENU FOR MOBILE LAYOUT -->

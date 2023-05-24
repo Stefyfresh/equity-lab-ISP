@@ -55,7 +55,7 @@ import TheFooter from '@/components/TheFooter.vue';
                 <h1 class="title">Bring equity to the classroom.</h1>
             </div>
             <div class="column">
-                <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+                <img class="is-rounded" alt="" src="https://bulma.io/images/placeholders/128x128.png">
             </div>
         </div>
     </section>

@@ -22,7 +22,7 @@ import TheFooter from '@/components/TheFooter.vue';
         <div class="columns">
             <div class="column">
                 <figure class="image is-128x128">
-                    <img src="https://bulma.io/images/placeholders/128x128.png">
+                    <img alt="" src="https://bulma.io/images/placeholders/128x128.png">
                 </figure>
             </div>
             <div class="column is-two-thirds is-flex is-align-items-center">
@@ -55,7 +55,7 @@ import TheFooter from '@/components/TheFooter.vue';
 
 #showcase .bg-image{
     position: absolute;
-    background:url('../../public/images/aboutus.jpg') no-repeat center;
+    background:url('/images/aboutus.webp') no-repeat center;
     background-size:cover;
     width:100%;
     height: 600px;

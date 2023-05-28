@@ -10,9 +10,8 @@ import TheFooter from '@/components/TheFooter.vue';
     <section id="showcase">
         <div class="bg-image"></div>
             <div class="container is-flex is-justify-content-center is-align-items-center">
-            <div class="circle m-6 p-4 is-flex is-align-items-center">
-                <div>
-                <h1 class="title is-flex is-justify-content-center has-text-white">About Us</h1>
+            <div class="circle m-6 p-4 is-flex is-align-items-center"><div>
+                <h1 class="title is-flex is-justify-content-center">About Us</h1>
                 <p class="p-3">Started in ICS4U. three people, one dream, blah blah blah Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quod dolor dolores, voluptas suscipit officia alias ex ut corporis nesciunt a amet optio nisi ullam odio voluptate. Voluptatem, ipsum hic?</p>
                 </div>
             </div>
@@ -46,11 +45,15 @@ import TheFooter from '@/components/TheFooter.vue';
 }
 
 .circle {
-    border-radius: 200px;
+    border-radius: 9999px;
     height: 400px;
     background-color: #FF6312;
-    color: #fff;
+    color: #fff !important;
     opacity: 0.9;
+}
+
+.title {
+    color: #fff !important;
 }
 
 #showcase .bg-image{

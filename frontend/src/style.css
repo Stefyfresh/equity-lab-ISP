@@ -10,7 +10,7 @@
 
 * {
   /* TODO: CHANGE THIS TO SANS-SERIF WHEN DONE */
-  font-family: Lexend, serif;
+  font-family: Lexend, sans-serif;
 
   transition: background-color 0.2s, color 0.1s, text-shadow 0.1s;
 }

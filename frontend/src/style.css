@@ -17,9 +17,15 @@
 
 
 .equity-lab-logo {
-  height: 60px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  width: 225px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .equity-lab-logo {
+    width: calc((3.25rem - 5px) * 9/2);
+    padding: 7.5px 20px;
+  }
 }
 
 .profile-sidebar {

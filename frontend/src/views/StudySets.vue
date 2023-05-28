@@ -24,7 +24,7 @@ const sets = ref(sourceData.sets);
         :to="{subject: set.show, params:{id: set.id, slug: set.slug}}"
       >
       <div class="set card m-1 mb-2">
-      <img :src="`/images/${set.image}`" :alt="set.name">
+      <img :src="`/images/${set.image}`" :alt="set.subject">
       <h2 class="is-flex is-justify-content-center pb-2 title is-6">{{ set.subject }}</h2>
     </div>
     </router-link>

@@ -2,8 +2,6 @@
 import AccountButton from '@/components/buttons/AccountButton.vue';
 import { onMounted } from 'vue';
 
-console.log("before load");
-
 onMounted(() => {
     const el = document.querySelector('.navbar-burger');
         el.addEventListener('click', () => {

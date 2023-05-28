@@ -9,12 +9,9 @@
 } */
 
 * {
-  /* TODO: CHANGE THIS TO SANS-SERIF WHEN DONE */
   font-family: Lexend, sans-serif;
-
   transition: background-color 0.2s, color 0.1s, text-shadow 0.1s;
 }
-
 
 .equity-lab-logo {
   width: 225px;
@@ -29,6 +26,8 @@
 }
 
 .profile-sidebar {
+  border-radius: 0;
+  /* TODO: VH does not work in this case since the element might be taller than the viewport */
   height: 100vh; 
 }
 

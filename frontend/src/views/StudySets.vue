@@ -2,7 +2,7 @@
 import TheNavigation from '@/components/TheNavigation.vue';
 import TheFooter from '@/components/TheFooter.vue';
 import {ref} from 'vue'
-import sourceData from '../../data.json'
+import sourceData from '@/data.json'
 
   
 const sets = ref(sourceData.sets);

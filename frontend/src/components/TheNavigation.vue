@@ -1,25 +1,43 @@
 <script setup>
 import AccountButton from '@/components/buttons/AccountButton.vue';
+import { onMounted } from 'vue';
+
+onMounted(() => {
+    const el = document.querySelector('.navbar-burger');
+        el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+        });
+})
+
 </script>
 
 <template>
-    <nav class="navbar" id="main-nav">
+    <nav class="navbar">
         <div class="container">
             <div class="navbar-brand">
                 <RouterLink to="/" aria-label="Home">
-                    <picture>
-                        <source srcset="/images/logo-light.webp" media="(prefers-color-scheme: dark)" class="equity-lab-logo">
-                        <img alt="" src="/images/logo-dark.webp" class="equity-lab-logo">
-                    </picture>
+                    <figure class="image equity-lab-logo">
+                        <picture>
+                            <source srcset="/images/logo-light.webp" media="(prefers-color-scheme: dark)">
+                            <img alt="" src="/images/logo-dark.webp">
+                        </picture>
+                    </figure>
                 </RouterLink>
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                    data-target="navbarBasicExample">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="main-nav">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                 </a>
             </div>
-            <div id="navbarMenuHeroA" class="navbar-menu topheight">
+            <div class="navbar-menu topheight" id="main-nav">
                 <div class="navbar-end">
                     <span class="navbar-item">
                         <RouterLink to="about">

@@ -9,20 +9,25 @@
 } */
 
 * {
-  /* TODO: CHANGE THIS TO SANS-SERIF WHEN DONE */
-  font-family: Lexend, serif;
-
+  font-family: Lexend, sans-serif;
   transition: background-color 0.2s, color 0.1s, text-shadow 0.1s;
 }
 
-
 .equity-lab-logo {
-  height: 60px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  width: 225px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .equity-lab-logo {
+    width: calc((3.25rem - 5px) * 9/2);
+    padding: 7.5px 20px;
+  }
 }
 
 .profile-sidebar {
+  border-radius: 0;
+  /* TODO: VH does not work in this case since the element might be taller than the viewport */
   height: 100vh; 
 }
 
@@ -36,6 +41,10 @@
 
 .is-404 {
   font-size: 300px;
+}
+
+.profile-section {
+  padding: 4rem 5rem;
 }
 
 .loading-columns{

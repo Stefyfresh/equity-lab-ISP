@@ -56,7 +56,7 @@
             </div>
             <div class="columns">
                 <div class="column"></div>
-                <div class="column is-two-fifths">
+                <div class="column is-one-fifth">
                     <div class="columns is-mobile">
                         <div class="column">
                             <a href="https://facebook.com" aria-label="Facebook"><i class="fa-brands fa-facebook-f fa-xl"></i></a>
@@ -75,6 +75,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="column is-one-fifth"></div>
             </div>
         </div>
     </footer>

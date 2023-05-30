@@ -30,6 +30,11 @@ const routes = [
         beforeEnter: authGuard,
     },
     {
+        path: '/leaderboard',
+        name: 'leaderboard',
+        component: () => import('@/views/Leaderboard.vue'),
+    },
+    {
         path: '/contact',
         name: 'contact',
         component: () => import('@/views/ContactUs.vue'),

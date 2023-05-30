@@ -53,3 +53,7 @@
 .has-auto-margin {
   margin: 0 auto;
 }
+
+.log-in-button {
+  height: 100px;
+}

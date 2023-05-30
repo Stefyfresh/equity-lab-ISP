@@ -7,7 +7,7 @@ const uri = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@${pro
 const fetch = require("node-fetch");
 
 const DB_NAME = 'data';
-const ROUTES = [ 'students', 'teachers', 'classes', 'scientists', 'study-sets' ];
+const ROUTES = [ 'students', 'teachers', 'classes', 'experts', 'questions' ];
 
 // Set up logger
 const logger = createLogger({

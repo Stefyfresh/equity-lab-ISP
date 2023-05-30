@@ -45,6 +45,30 @@ const routes = [
         component: () => import('@/views/StudySets.vue'),
     },
     {
+      path: '/learn/:id/:slug',
+      name: 'set.show',
+      component: () => import('@/views/Learn.vue'),
+      props: route=> ({...route.params, id: parseInt(route.params.id)}),
+    //   beforeEnter(to, from){
+    //     const exists = sourceData.sets.find(
+    //       set => set.id === parseInt(to.params.id)
+    //     )
+    //     if(!exists) return {
+    //       name: 'NotFound',
+    //       params: { pathMatch: to.path.split('/').slice(1) },
+    //       query: to.query,
+    //       hash: to.hash,
+    //     }
+    // }
+    //   }, Will need later, do not delete
+    //   children:[{
+    //     path: ':experienceSlug',
+    //     name: 'experience.show',
+    //     component: () => import('@/views/ExperienceShow.vue'),
+    //     props: route=> ({...route.params, id: parseInt(route.params.id)})
+    //   }]
+    },
+    {
         path: '/callback',
         name: 'callback',
         component: () => import('@/views/Loading.vue'),

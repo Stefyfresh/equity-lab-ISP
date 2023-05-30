@@ -4,9 +4,10 @@ const { createLogger, format, transports } = require('winston');
 const BodyParser = require("body-parser");
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const uri = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@${process.env.MONGO_URL}/?retryWrites=true&w=majority&compressors=snappy,zlib`;
+const fetch = require("node-fetch");
 
 const DB_NAME = 'data';
-const ROUTES = [ 'students', 'teachers', 'classes', 'scientists', 'study-sets' ];
+const ROUTES = [ 'students', 'teachers', 'classes', 'experts', 'questions' ];
 
 // Set up logger
 const logger = createLogger({
@@ -16,7 +17,7 @@ const logger = createLogger({
         format.errors({ stack: true }),
         format.splat(),
         format.colorize(),
-        format.printf(({ level, message, timestamp }) => {
+        format.printf(({ level, message }) => {
             return `${level}: ${message}`;
         }),
     ),
@@ -86,6 +87,11 @@ ROUTES.forEach(route => {
     });
 });
 
+// Send intermittent web requests to keep the web service alive (I hope)
+const keepalive = setInterval(() => {
+    fetch("https://google.ca");
+}, 600_000);
+
 
 // Close database when program exits and log output
 [`exit`, `SIGINT`, `SIGUSR1`, `SIGUSR2`, `SIGTERM`].forEach((eventType) => {
@@ -102,5 +108,6 @@ process.on('uncaughtException', (err, origin) => {
 function exit(options, exitCode) {
     if (options != "exit") logger.warn('Received program exit signal! Shutting down.');
     client.close();
+    clearInterval(keepalive);
     process.exit();
 }

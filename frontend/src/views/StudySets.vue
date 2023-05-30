@@ -17,17 +17,17 @@ const sets = ref(sourceData.sets);
 
     <div class="container is-fluid is-flex is-flex-wrap-wrap is-justify-content-center"> <!--is-flex is-justify-content-center"-->
     
-      <router-link v-if="sets"
-      
-        v-for= "set in sets" 
-        :key="set.id" 
-        :to="{subject: set.show, params:{id: set.id, slug: set.slug}}"
+      <span v-for= "set in sets" :key="set.id" >
+      <router-link 
+        :to="{name: 'set.show', params:{id: set.id, slug: set.slug}}"
       >
+    
       <div class="set card m-1 mb-2">
-      <img :src="`/images/${set.image}`" :alt="set.name">
+      <img :src="`/images/${set.image}`" :alt="set.subject">
       <h2 class="is-flex is-justify-content-center pb-2 title is-6">{{ set.subject }}</h2>
     </div>
     </router-link>
+  </span>
     </div>
   
     

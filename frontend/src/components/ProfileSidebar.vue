@@ -28,7 +28,7 @@
                 </span>
                 <span class="navbar-item sidebar-item">
                     <button class="button is-dark is-inverted is-medium">
-                        <RouterLink to="study">
+                        <RouterLink to="leaderboard">
                             <span class="icon is-medium">
                                 <i class="fa-solid fa-ranking-star"></i>
                             </span>

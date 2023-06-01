@@ -13,10 +13,29 @@ import ProfileSidebar from '@/components/ProfileSidebar.vue';
                     <figure class="image is-128x128 is-inline-block">
                         <img class="is-rounded" alt="" src="/images/128x128.webp">
                     </figure>
-                    <h1 class="title">[username]</h1>
-                    <h1 class="subtitle">[teacher]'s class</h1>
+                    <h1 class="title">[Username]</h1>
+                    <h1 class="subtitle">[Teacher]'s class</h1>
+                    <div class="columns">
+                        <div class="column">
+                            <div class="box">
+                                <h1 class="subtitle">Questions answered</h1>
+                                <h1 class="title">987</h1>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="box">
+                                <h1 class="subtitle">Total subjects explored</h1>
+                                <h1 class="title">7</h1>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="box">
+                                <h1 class="subtitle">Class Ranking</h1>
+                                <h1 class="title">1st</h1>
+                            </div>
+                        </div>
+                    </div>
                 </section>
-                
             </div>
         </div>
     </div>

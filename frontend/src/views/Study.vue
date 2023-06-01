@@ -6,8 +6,6 @@ import TheFooter from '@/components/TheFooter.vue';
 <template>
     <header class="header">
         <TheNavigation></TheNavigation>
-    </header>
-    
-    
+    </header> 
     <TheFooter></TheFooter>
 </template>

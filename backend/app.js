@@ -87,9 +87,14 @@ ROUTES.forEach(route => {
     });
 });
 
+// Set up base route
+app.get('/', (req, res) => {
+    res.send("There is nothing at the root! Try requesting a path, like /students")
+})
+
 // Send intermittent web requests to keep the web service alive (I hope)
 const keepalive = setInterval(() => {
-    fetch("https://google.ca");
+    fetch("https://api.equitylab.io");
 }, 600_000);
 
 

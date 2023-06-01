@@ -1,9 +1,8 @@
 <script setup>
 import TheNavigation from '@/components/TheNavigation.vue';
 import TheFooter from '@/components/TheFooter.vue';
-import {ref} from 'vue'
-import axios from 'axios'
-import StudySetInfo from '@/services/EventService.js'
+import {ref, onMounted} from 'vue'
+import StudySetInfo from '@/services/StudySetInfo.js'
  
 const subjects = ref(null)
  
@@ -16,7 +15,6 @@ onMounted(() => {
       console.log(error)
     })
 })
-
       
 </script>
 
@@ -28,14 +26,14 @@ onMounted(() => {
 
     <div class="container is-fluid is-flex is-flex-wrap-wrap is-justify-content-center"> <!--is-flex is-justify-content-center"-->
     
-      <span v-for= "set in sets" :key="set.id" >
+      <span v-for= "subject in subjects" :key="subject.id" >
       <router-link 
-        :to="{name: 'set.show', params:{id: set.id, slug: set.slug}}"
+        :to="{name: 'subject.show', params:{id: subject.id, slug: subject.slug}}"
       >
     
       <div class="set card m-1 mb-2">
-      <img :src="`/images/${set.image}`" :alt="set.subject">
-      <h2 class="is-flex is-justify-content-center pb-2 title is-6">{{ set.subject }}</h2>
+      <img :src="`/images/${subject.image}`" :alt="subject.name">
+      <h2 class="is-flex is-justify-content-center pb-2 title is-6">{{ subject.name }}</h2>
     </div>
     </router-link>
   </span>

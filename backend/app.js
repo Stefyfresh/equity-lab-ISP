@@ -82,6 +82,7 @@ ROUTES.forEach(route => {
         if (db == null) res.status(500).send("ERROR: Server is starting.");
         else
         (async function () {
+            res.setHeader("Access-Control-Allow-Origin", "*");
             res.send(await db.collection(route).find({}).toArray());
         })();
     });

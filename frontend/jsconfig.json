@@ -1,7 +1,7 @@
 {
     "include":[
        "./src/**/*"
-    ],
+, "../backend/services"    ],
     "compilerOptions":{
        "baseUrl":".",
        "paths": {

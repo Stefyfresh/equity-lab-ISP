@@ -7,7 +7,7 @@ const uri = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@${pro
 const fetch = require("node-fetch");
 
 const DB_NAME = 'data';
-const ROUTES = [ 'students', 'teachers', 'classes', 'experts', 'questions' ];
+const ROUTES = [ 'students', 'teachers', 'classes', 'experts', 'questions', 'subjects' ];
 
 // Set up logger
 const logger = createLogger({
@@ -82,14 +82,20 @@ ROUTES.forEach(route => {
         if (db == null) res.status(500).send("ERROR: Server is starting.");
         else
         (async function () {
+            res.setHeader("Access-Control-Allow-Origin", "*");
             res.send(await db.collection(route).find({}).toArray());
         })();
     });
 });
 
+// Set up base route
+app.get('/', (req, res) => {
+    res.send("There is nothing at the root! Try requesting a path, like /students")
+})
+
 // Send intermittent web requests to keep the web service alive (I hope)
 const keepalive = setInterval(() => {
-    fetch("https://google.ca");
+    fetch("https://api.equitylab.io");
 }, 600_000);
 
 

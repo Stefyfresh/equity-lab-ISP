@@ -1,5 +1,9 @@
 <script setup>
 import ProfileSidebar from '@/components/ProfileSidebar.vue';
+
+import { useAuth0 } from "@auth0/auth0-vue";
+
+const { isAuthenticated, user } = useAuth0();
 </script>
 
 <template>
@@ -9,7 +13,7 @@ import ProfileSidebar from '@/components/ProfileSidebar.vue';
         </div>
         <div class="column is-9">
             <section class="section profile-section">
-                <h1 class="title">Welcome back, [username]!</h1>
+                <h1 class="title">Welcome back, {{ user.name }}!</h1>
                 <div class="box">
                     <figure class="image is-3by1">
                         <img src="https://bulma.io/images/placeholders/256x256.png">

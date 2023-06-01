@@ -2,10 +2,21 @@
 import TheNavigation from '@/components/TheNavigation.vue';
 import TheFooter from '@/components/TheFooter.vue';
 import {ref} from 'vue'
-import sourceData from '../../data.json'
+import axios from 'axios'
+import StudySetInfo from '@/services/EventService.js'
+ 
+const subjects = ref(null)
+ 
+onMounted(() => {
+  StudySetInfo.getSubjects()
+    .then((response) => {
+      subjects.value = response.data
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
 
-  
-const sets = ref(sourceData.sets);
       
 </script>
 

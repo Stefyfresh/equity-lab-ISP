@@ -6,16 +6,14 @@ import TheFooter from '@/components/TheFooter.vue';
 <template>
    <TheNavigation></TheNavigation>
     <header class="header">
-        <section class="section is-medium">
-            <div class="columns">
-                <div class="column has-text-right">
-                    <h1 class="title">Placeholder text</h1>
+        <div class="columns is-gapless has-background-light">
+                <div class="column has-text-right has-background-light">
+                    <h1 class="title">Bring equity to the classroom.</h1>
                 </div>
                 <div class="column">
-                    <img alt="" src="https://img.redbull.com/images/f_auto/wingfinder/sphere/background">
+                    <img alt="" src="https://www.turnitin.com/img/http/aHR0cHM6Ly9tYXJrZXRpbmctdGlpLXN0YXRhbWljLWFzc2V0cy11cy13ZXN0LTIuczMtdXMtd2VzdC0yLmFtYXpvbmF3cy5jb20vZWRpdG9yaWFsL2ltYWdlcy9lbXBvd2VyLXN0dWRlbnRzLXRvLWRvLXRoZWlyLWJlc3Qtb3JpZ2luYWwtd29yay5wbmc=?s=719a47c4dd5cb62edb02ac398dcf4449">
                 </div>
             </div>
-        </section>
     </header>
     <section class="section is-small has-background-white has-text-centered">
         <div class="title">What students think about Equity Lab</div>
@@ -52,7 +50,7 @@ import TheFooter from '@/components/TheFooter.vue';
     <section class="section is-medium">
         <div class="columns">
             <div class="column has-text-right">
-                <h1 class="title">Bring equity to the classroom.</h1>
+                <h1 class="title">Learn how to incorporate Equity Lab with your school's curriculum</h1>
             </div>
             <div class="column">
                 <img alt="" class="is-rounded" src="/images/128x128.webp">

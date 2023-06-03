@@ -28,7 +28,7 @@ onMounted(() => {
     
       <span v-for= "subject in subjects" :key="subject.id" >
       <router-link 
-        :to="{name: 'subject.show', params:{id: subject.id, slug: subject.slug}}"
+        :to="{name: subject.show, params:{id: subject.id, slug: subject.slug}}"
       >
     
       <div class="set card m-1 mb-2">

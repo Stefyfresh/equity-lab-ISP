@@ -12,7 +12,7 @@
             </div>
             <div class="card-image has-text-centered block">
                 <figure class="image is-128x128 is-inline-block">
-                    <img class="is-rounded" alt="" src="/images/128x128.webp">
+                    <img class="is-rounded" alt="" :src="user.picture">
                 </figure>
             </div>
             <div class="menu-list">
@@ -76,4 +76,7 @@
 
 <script setup>
 import LogoutButton from '@/components/buttons/LogoutButton.vue';
+import { useAuth0 } from "@auth0/auth0-vue";
+
+const { user } = useAuth0();
 </script>

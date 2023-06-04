@@ -15,6 +15,7 @@ onMounted(() => {
       console.log(error)
     })
 })
+
       
 </script>
 
@@ -28,7 +29,7 @@ onMounted(() => {
     
       <span v-for= "subject in subjects" :key="subject.id" >
       <router-link 
-        :to="{name: subject.show, params:{id: subject.id, slug: subject.slug}}"
+        :to="{name: 'studysubject', params:{subjectID: subject.subjectID}}"
       >
     
       <div class="set card m-1 mb-2">

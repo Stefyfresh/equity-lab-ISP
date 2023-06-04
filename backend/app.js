@@ -104,6 +104,27 @@ app.get(`/students/:id`, (req, res) => {
     })();
 });
 
+app.get(`/subjects/:id`, (req, res) => {
+    if (db == null) res.status(500).send("ERROR: Server is starting.");
+    else
+    (async function () {
+        query = await db.collection("subjects").findOne({ subjectID: parseInt(req.params.id) });
+        // Change the {} if we need to return something other than an empty object when id doesn't exist
+        res.send(query ? query : {}); 
+    })();
+});
+
+app.get(`/experts/:id`, (req, res) => {
+    if (db == null) res.status(500).send("ERROR: Server is starting.");
+    else
+    (async function () {
+        query = await db.collection("experts").findOne({ expertID: parseInt(req.params.id) });
+        // Change the {} if we need to return something other than an empty object when id doesn't exist
+        res.send(query ? query : {}); 
+    })();
+});
+
+
 
 // Set up base route
 app.get('/', (req, res) => {

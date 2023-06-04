@@ -4,7 +4,7 @@
             <span>Log In</span>
         </button>
     </RouterLink>
-    <RouterLink to="home" v-else>
+    <RouterLink to="/home" v-else>
         <button class="button is-primary is-inverted">
             <span>Hello, {{ user.name }}</span>
         </button>

@@ -2,7 +2,7 @@
 const Express = require("express");
 const { createLogger, format, transports } = require('winston');
 const BodyParser = require("body-parser");
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, Db } = require('mongodb');
 const uri = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@${process.env.MONGO_URL}/?retryWrites=true&w=majority&compressors=snappy,zlib`;
 const fetch = require("node-fetch");
 
@@ -60,7 +60,8 @@ const client = new MongoClient(uri, {
       deprecationErrors: true,
     }
 });
-let db; 
+// Null database to make up for the fact that TypeScript > JavaScript
+let db = new Db(null, "something"); 
 
 
 // Connect to database
@@ -90,6 +91,19 @@ ROUTES.forEach(route => {
         })();
     });
 });
+
+// Set up individual item routes
+// Copy-paste this and change it for each individual route, we can't use the forEach like above
+app.get(`/students/:id`, (req, res) => {
+    if (db == null) res.status(500).send("ERROR: Server is starting.");
+    else
+    (async function () {
+        query = await db.collection("students").findOne({ studentID: parseInt(req.params.id) });
+        // Change the {} if we need to return something other than an empty object when id doesn't exist
+        res.send(query ? query : {}); 
+    })();
+});
+
 
 // Set up base route
 app.get('/', (req, res) => {

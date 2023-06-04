@@ -43,6 +43,10 @@ app.use(BodyParser.json());
 app.use(BodyParser.urlencoded({ extended: true }));
 // app.use(logRequest);
 app.use(logReqErr);
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    next();
+});
 app.listen(5000, () => {
     logger.info("Started Express server.");
 });
@@ -82,7 +86,6 @@ ROUTES.forEach(route => {
         if (db == null) res.status(500).send("ERROR: Server is starting.");
         else
         (async function () {
-            res.setHeader("Access-Control-Allow-Origin", "*");
             res.send(await db.collection(route).find({}).toArray());
         })();
     });

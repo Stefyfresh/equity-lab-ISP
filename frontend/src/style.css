@@ -25,40 +25,14 @@
   }
 }
 
-.profile-sidebar {
-  border-radius: 0;
-  /* TODO: VH does not work in this case since the element might be taller than the viewport */
-  height: 100vh; 
-}
-
-.inside-profile-sidebar {
-  padding-top: 20px;
-}
-
-.main-panel {
-  padding-top: 80px;
-}
-
-.is-404 {
-  font-size: 300px;
-}
-
 .profile-section {
   padding: 4rem 5rem;
-}
-
-.loading-columns{
-  height: 100vh;
-}
-
-.loading-columns video{
-  height: 35vh;
 }
 
 .has-auto-margin {
   margin: 0 auto;
 }
 
-.log-in-button {
-  height: 100px;
+.is-viewport-height {
+  height: 100vh;
 }

@@ -3,7 +3,7 @@ import ProfileSidebar from '@/components/ProfileSidebar.vue';
 
 import { useAuth0 } from "@auth0/auth0-vue";
 
-const { isAuthenticated, user } = useAuth0();
+const { user } = useAuth0();
 </script>
 
 <template>
@@ -16,7 +16,7 @@ const { isAuthenticated, user } = useAuth0();
                 <h1 class="title">Welcome back, {{ user.name }}!</h1>
                 <div class="box">
                     <figure class="image is-3by1">
-                        <img src="https://bulma.io/images/placeholders/256x256.png">
+                        <img src="/images/placeholders/256x256.webp">
                     </figure>
                     <h1 class="subtitle">Start exploring Equity Lab</h1>
                 </div>
@@ -24,7 +24,7 @@ const { isAuthenticated, user } = useAuth0();
                     <div class="column">
                         <div class="box">
                             <figure class="image is-2by1">
-                                <img src="https://bulma.io/images/placeholders/256x256.png">
+                                <img src="/images/placeholders/256x256.webp">
                             </figure>
                             <h1 class="subtitle">Test your skills</h1>
                         </div>
@@ -32,7 +32,7 @@ const { isAuthenticated, user } = useAuth0();
                     <div class="column">
                         <div class="box">
                             <figure class="image is-2by1">
-                                <img src="https://bulma.io/images/placeholders/256x256.png">
+                                <img src="/images/placeholders/256x256.webp">
                             </figure>
                             <h1 class="subtitle">Challenge yourself</h1>
                         </div>

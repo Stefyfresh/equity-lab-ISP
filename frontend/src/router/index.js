@@ -22,6 +22,7 @@ const routes = [
         path: '/home',
         name: 'home',
         component: () => import('@/views/Home.vue'),
+        beforeEnter: authGuard,
     },
     {
         path: '/profile',
@@ -33,6 +34,7 @@ const routes = [
         path: '/leaderboard',
         name: 'leaderboard',
         component: () => import('@/views/Leaderboard.vue'),
+        beforeEnter: authGuard,
     },
     {
         path: '/contact',

@@ -66,7 +66,7 @@ onMounted(() => {
     <TheFooter class="mt-3"></TheFooter>
 </template>
 
-<style>
+<style scoped>
 .activity{
   max-width: 400px;
   border-radius: 10px;

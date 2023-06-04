@@ -37,7 +37,15 @@ const emojis = "\\(^\u0414^)/ (\u0387.\u0387) (\u02da\u0394\u02da)b (\u0387_\u03
     font: 200px/1.25 Google Sans;
 }
 
-.is-404 {
-  font-size: 300px;
+@media screen and (max-width: 768px) {
+    #emoji {
+        font: 120px/1.25 Google Sans;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #emoji {
+        font: 80px/1.25 Google Sans;
+    }
 }
 </style>

@@ -13,3 +13,13 @@
       </div>
    </div>
 </template>
+
+<style scoped>
+.loading-columns video{
+  height: 35vh;
+}
+
+.loading-columns{
+  height: 100vh;
+}
+</style>

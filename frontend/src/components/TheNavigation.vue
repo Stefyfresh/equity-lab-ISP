@@ -68,3 +68,17 @@ onMounted(() => {
         </div>
     </nav>
 </template>
+
+<style scoped>
+.equity-lab-logo {
+  width: 225px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .equity-lab-logo {
+    width: calc((3.25rem - 5px) * 9/2);
+    padding: 7.5px 20px;
+  }
+}
+</style>

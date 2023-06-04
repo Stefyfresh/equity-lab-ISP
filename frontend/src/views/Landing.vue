@@ -21,7 +21,7 @@ import TheFooter from '@/components/TheFooter.vue';
             <div class="column">
                 <div class="box has-text-centered">
                     <figure class="image is-128x128">
-                        <img alt="" class="is-rounded" src="/images/128x128.webp">
+                        <img alt="" class="is-rounded" src="/images/placeholders/128x128.webp">
                       </figure>  
                     <h1 class="title is-5">"The games are fun."</h1>
                     <h1 class="subtitle is-6">An anonymous student, Grade 6</h1>
@@ -30,7 +30,7 @@ import TheFooter from '@/components/TheFooter.vue';
             <div class="column">
                 <div class="box has-text-centered">
                     <figure class="image is-128x128">
-                        <img alt="" class="is-rounded" src="/images/128x128.webp">
+                        <img alt="" class="is-rounded" src="/images/placeholders/128x128.webp">
                       </figure>  
                     <h1 class="title is-5">"This is cool."</h1>
                     <h1 class="subtitle is-6">An anonymous student, Grade 5</h1>
@@ -39,7 +39,7 @@ import TheFooter from '@/components/TheFooter.vue';
             <div class="column">
                 <div class="box has-text-centered">
                     <figure class="image is-128x128">
-                        <img alt="" class="is-rounded" src="/images/128x128.webp">
+                        <img alt="" class="is-rounded" src="/images/placeholders/128x128.webp">
                       </figure>  
                     <h1 class="title is-5">"Wow this is good"</h1>
                     <h1 class="subtitle is-6">An anonymous student, Grade 8</h1>
@@ -53,7 +53,7 @@ import TheFooter from '@/components/TheFooter.vue';
                 <h1 class="title">Learn how to incorporate Equity Lab with your school's curriculum</h1>
             </div>
             <div class="column">
-                <img alt="" class="is-rounded" src="/images/128x128.webp">
+                <img alt="" class="is-rounded" src="/images/placeholders/128x128.webp">
             </div>
         </div>
     </section>

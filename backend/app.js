@@ -137,7 +137,7 @@ app.get(`/experts/:subject`, (req, res) => {
     if (db == null) res.status(500).send("ERROR: Server is starting.");
     else
     (async function () {
-        query = await db.collection("experts").find({ subject: parseInt(req.params.subject) }).toArray();
+        query = await db.collection("experts").find({ subject: req.params.subject.toString() }).toArray();
         // Change the {} if we need to return something other than an empty object when id doesn't exist
         res.send(query ? query : {}); 
     })();

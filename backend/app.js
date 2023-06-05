@@ -104,6 +104,15 @@ app.get(`/students/:id`, (req, res) => {
     })();
 });
 
+app.get(`/users/email/:email`, (req, res) => {
+    if (db == null) res.status(500).send("ERROR: Server is starting.");
+    else
+    (async function () {
+        query = await db.collection("users").findOne({ email: req.params.email });
+        res.send(query ? query : {}); 
+    })();
+});
+
 app.get(`/subjects/:id`, (req, res) => {
     if (db == null) res.status(500).send("ERROR: Server is starting.");
     else

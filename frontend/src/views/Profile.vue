@@ -1,5 +1,8 @@
 <script setup>
 import ProfileSidebar from '@/components/ProfileSidebar.vue';
+import { useAuth0 } from "@auth0/auth0-vue";
+
+const { user } = useAuth0();
 </script>
 
 <template>
@@ -11,9 +14,9 @@ import ProfileSidebar from '@/components/ProfileSidebar.vue';
             <div class="has-text-centered block">
                 <section class="section profile-section">
                     <figure class="image is-128x128 is-inline-block">
-                        <img class="is-rounded" alt="" src="/images/128x128.webp">
+                        <img class="is-rounded" alt="" :src="user.picture">
                     </figure>
-                    <h1 class="title">[Username]</h1>
+                    <h1 class="title">{{ user.name }}</h1>
                     <h1 class="subtitle">[Teacher]'s class</h1>
                     <div class="columns">
                         <div class="column">

@@ -40,21 +40,21 @@ onMounted(() => {
             <div class="navbar-menu topheight" id="main-nav">
                 <div class="navbar-end">
                     <span class="navbar-item">
-                        <RouterLink to="about">
+                        <RouterLink to="/about">
                             <button class="button is-dark is-inverted">
                                 <span>About</span>
                             </button>
                         </RouterLink>
                     </span>
                     <span class="navbar-item">
-                        <RouterLink to="study">
+                        <RouterLink to="/study">
                             <button class="button is-dark is-inverted">
                                 <span>Study</span>
                             </button>
                         </RouterLink>
                     </span>
                     <span class="navbar-item">
-                        <RouterLink to="contact">
+                        <RouterLink to="/contact">
                             <button class="button is-dark is-inverted">
                                 <span>Contact</span>
                             </button>
@@ -68,3 +68,17 @@ onMounted(() => {
         </div>
     </nav>
 </template>
+
+<style scoped>
+.equity-lab-logo {
+  width: 225px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .equity-lab-logo {
+    width: calc((3.25rem - 5px) * 9/2);
+    padding: 7.5px 20px;
+  }
+}
+</style>

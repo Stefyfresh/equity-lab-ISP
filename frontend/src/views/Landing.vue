@@ -26,7 +26,7 @@ import TheFooter from '@/components/TheFooter.vue';
                 <div class="box has-text-centered">
                     <figure class="image is-inline-block block">
                         <img alt="" class="" src="https://media.istockphoto.com/id/854169794/photo/elementary-student-going-back-to-school.jpg?s=612x612&w=0&k=20&c=APEN-3y-QUx-3oaNJe0zNCjgpveudmDS1IxIhU63vT0=">
-                      </figure>  
+                    </figure>  
                     <h1 class="title is-5">"The games are fun. <br>I think this is really cool"</h1>
                     <h1 class="subtitle is-6 pt-2">Jane, Grade 6</h1>
                 </div>
@@ -35,7 +35,7 @@ import TheFooter from '@/components/TheFooter.vue';
                 <div class="box has-text-centered">
                     <figure class="image is-inline-block block">
                         <img alt="" class="" src="https://media.istockphoto.com/id/887302366/photo/portrait-of-male-teenage-student-in-uniform-outside-buildings.jpg?s=612x612&w=0&k=20&c=hoha_IGYlGKM57gqX0QPQdnBvnrJPtHLn8ErZ6QK2nY=">
-                      </figure>  
+                    </figure>  
                     <h1 class="title is-5 block">"This makes learning about <br>STEM way better."</h1>
                     <h1 class="subtitle is-6 pt-2">John, Grade 8</h1>
                 </div>
@@ -44,7 +44,7 @@ import TheFooter from '@/components/TheFooter.vue';
                 <div class="box has-text-centered">
                     <figure class="image is-inline-block block">
                         <img alt="" class="" src="https://t3.ftcdn.net/jpg/02/02/52/36/360_F_202523652_NqEMp50IkORLXlCmJXqgqRBLMW8xBHMP.jpg">
-                      </figure>  
+                    </figure>  
                     <h1 class="title is-5">"With Equity Lab, my class is more engaged than ever"</h1>
                     <h1 class="subtitle is-6 pt-2">Ms. Teacher, 7th grade teacher</h1>
                 </div>
@@ -62,7 +62,7 @@ import TheFooter from '@/components/TheFooter.vue';
             <div class="column is-4">
                 <figure class="image is-inline-block">
                     <img alt="" class="" src="https://jsis.washington.edu/canada/wp-content/uploads/sites/20/2017/06/gibney_students-800x534.jpg">
-                </figure>
+            </figure>
                 <RouterLink to="about" class="title">Read about our mission to bring equity to schools across Canada</RouterLink>
             </div>
         </div>

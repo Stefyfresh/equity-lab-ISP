@@ -2,7 +2,7 @@
 const Express = require("express");
 const { createLogger, format, transports } = require('winston');
 const BodyParser = require("body-parser");
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, Db } = require('mongodb');
 const uri = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@${process.env.MONGO_URL}/?retryWrites=true&w=majority&compressors=snappy,zlib`;
 const fetch = require("node-fetch");
 
@@ -43,6 +43,10 @@ app.use(BodyParser.json());
 app.use(BodyParser.urlencoded({ extended: true }));
 // app.use(logRequest);
 app.use(logReqErr);
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    next();
+});
 app.listen(5000, () => {
     logger.info("Started Express server.");
 });
@@ -56,7 +60,8 @@ const client = new MongoClient(uri, {
       deprecationErrors: true,
     }
 });
-let db; 
+// Null database to make up for the fact that TypeScript > JavaScript
+let db = new Db(null, "something"); 
 
 
 // Connect to database
@@ -82,11 +87,44 @@ ROUTES.forEach(route => {
         if (db == null) res.status(500).send("ERROR: Server is starting.");
         else
         (async function () {
-            res.setHeader("Access-Control-Allow-Origin", "*");
             res.send(await db.collection(route).find({}).toArray());
         })();
     });
 });
+
+// Set up individual item routes
+// Copy-paste this and change it for each individual route, we can't use the forEach like above
+app.get(`/students/:id`, (req, res) => {
+    if (db == null) res.status(500).send("ERROR: Server is starting.");
+    else
+    (async function () {
+        query = await db.collection("students").findOne({ studentID: parseInt(req.params.id) });
+        // Change the {} if we need to return something other than an empty object when id doesn't exist
+        res.send(query ? query : {}); 
+    })();
+});
+
+app.get(`/subjects/:id`, (req, res) => {
+    if (db == null) res.status(500).send("ERROR: Server is starting.");
+    else
+    (async function () {
+        query = await db.collection("subjects").findOne({ subjectID: parseInt(req.params.id) });
+        // Change the {} if we need to return something other than an empty object when id doesn't exist
+        res.send(query ? query : {}); 
+    })();
+});
+
+app.get(`/experts/:id`, (req, res) => {
+    if (db == null) res.status(500).send("ERROR: Server is starting.");
+    else
+    (async function () {
+        query = await db.collection("experts").findOne({ expertID: parseInt(req.params.id) });
+        // Change the {} if we need to return something other than an empty object when id doesn't exist
+        res.send(query ? query : {}); 
+    })();
+});
+
+
 
 // Set up base route
 app.get('/', (req, res) => {

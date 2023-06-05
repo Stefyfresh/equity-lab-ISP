@@ -1,18 +1,97 @@
+<script setup>
+import LogoutButton from '@/components/buttons/LogoutButton.vue';
+import { useAuth0 } from "@auth0/auth0-vue";
+import { onMounted } from "vue";
+
+const { user } = useAuth0();
+
+onMounted(() => {
+    const el = document.querySelector('.navbar-burger');
+        el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+        });
+})
+</script>
+
 <template>
-    <div class="box profile-sidebar">
-        <aside class="menu is-hidden-mobile">
+    <!-- Mobile navbar -->
+    <nav class="navbar is-hidden-tablet">
+        <div class="navbar-brand">
+            <RouterLink to="/" aria-label="Home">
+                <figure class="image equity-lab-logo">
+                    <picture>
+                        <source srcset="/images/logo-light.webp" media="(prefers-color-scheme: dark)">
+                        <img alt="" src="/images/logo-dark.webp">
+                    </picture>
+                </figure>
+            </RouterLink>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mobile-nav">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="mobile-nav" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <RouterLink to="home" class="button is-dark is-inverted">
+                        <span class="icon is-medium">
+                            <i class="fa-solid fa-house"></i>
+                        </span>
+                        <span>Dashboard</span>
+                    </RouterLink>
+                </div>
+                <div class="navbar-item">
+                    <RouterLink to="leaderboard" class="button is-dark is-inverted">
+                        <span class="icon is-medium">
+                            <i class="fa-solid fa-ranking-star"></i>
+                        </span>
+                        <span>Leaderboard</span>
+                    </RouterLink>
+                </div>  
+                <div class="navbar-item">
+                    <RouterLink to="profile" class="button is-dark is-inverted">
+                        <span class="icon is-medium">
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                        <span>Profile</span>
+                    </RouterLink>
+                </div>
+                <div class="navbar-item">
+                    <a class="button is-dark is-inverted">
+                        <span class="icon is-medium">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                        </span>
+                        <LogoutButton></LogoutButton>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Desktop navbar -->
+    <div class="box profile-sidebar is-hidden-mobile">
+        <aside class="menu">
             <div class="has-text-centered block">
                 <RouterLink to="/">
                     <picture>
-                        <source srcset="/images/logo-light.webp" media="(prefers-color-scheme: dark)"
-                            class="equity-lab-logo">
-                        <img src="/images/logo-dark.webp" alt="" class="equity-lab-logo">
+                        <source srcset="/images/logo-light.webp" media="(prefers-color-scheme: dark)">
+                        <img src="/images/logo-dark.webp" alt="" class="equity-lab-image">
                     </picture>
                 </RouterLink>
             </div>
             <div class="card-image has-text-centered block">
                 <figure class="image is-128x128 is-inline-block">
-                    <img class="is-rounded" alt="" src="/images/128x128.webp">
+                    <img class="is-rounded" alt="" :src="user.picture">
                 </figure>
             </div>
             <div class="menu-list">
@@ -74,6 +153,27 @@
     </div>
 </template>
 
-<script setup>
-import LogoutButton from '@/components/buttons/LogoutButton.vue';
-</script>
+<style scoped>
+.profile-sidebar {
+  border-radius: 0;
+  /* TODO: VH does not work in this case since the element might be taller than the viewport */
+  height: 100vh; 
+}
+
+.equity-lab-image {
+    padding: 15px;
+    max-width: 300px;
+}
+
+#mobile-nav {
+    color: white;
+}
+
+.navbar-menu .column {
+    padding: 20px 0;
+}
+
+.navbar-item a {
+    color: white;
+}
+</style>

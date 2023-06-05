@@ -22,19 +22,19 @@ const routes = [
         path: '/home',
         name: 'home',
         component: () => import('@/views/Home.vue'),
-        beforeEnter: authGuard,
+        // beforeEnter: authGuard,
     },
     {
         path: '/profile',
         name: 'profile',
         component: () => import('@/views/Profile.vue'),
-        beforeEnter: authGuard,
+        // beforeEnter: authGuard,
     },
     {
         path: '/leaderboard',
         name: 'leaderboard',
         component: () => import('@/views/Leaderboard.vue'),
-        beforeEnter: authGuard,
+        // beforeEnter: authGuard,
     },
     {
         path: '/contact',

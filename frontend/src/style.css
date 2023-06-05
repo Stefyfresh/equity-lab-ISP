@@ -62,3 +62,9 @@
 .log-in-button {
   height: 100px;
 }
+
+.landing-text {
+  font-weight: 400;
+  font-size: 52px;
+  margin-top: 40%;
+}

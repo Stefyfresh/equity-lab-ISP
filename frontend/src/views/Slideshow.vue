@@ -6,10 +6,18 @@ import StudySetInfo from '@/services/StudySetInfo.js'
 import LoadingAnimation from '@/components/LoadingAnimation.vue';
 
 const experts = ref(null)
-const numExperts = 1;
+let expert = "";
+let currExpert = 1;
+let numExperts = 2;
 
-/*onMounted(() => {
-  StudySetInfo.getExperts()
+const props = defineProps({
+  name: {
+    required: true,
+  }
+})
+
+onMounted(() => {
+  StudySetInfo.getExpertsbySubject(props.name)
     .then((response) => {
       experts.value = response.data
     })
@@ -18,15 +26,49 @@ const numExperts = 1;
     })
 })
 
-let tempexperts = [];
+document.getElementById("previous").addEventListener("click", btnPrevious);
+document.getElementById("next").addEventListener("click", btnNext);
 
-for(let i=1; i < numExperts; i++){
-    Object expert = experts.expertID(i);
-    if(
-    .subject.equalsTo('Chemistry')){
-        tempexperts.push(expert);
-    }
-}*/
+
+function showPage(expertID){
+onMounted(() => {
+  StudySetInfo.getExpert(expertID)
+    .then((response) => {
+      expert.value = response.data
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
+  expert = ref(null);
+}
+
+function btnPrevious(){
+  if(currExpert > 1){
+    currExpert--;
+    showPage(currExpert);
+  }
+}
+
+// Functionality for next button
+function btnNext(){
+  if(currExpert < numExperts){
+    currExpert++;
+    showPage(currExpert);
+  }
+}
+
+
+function start(){
+    createPagination();
+    showPage(currPage);
+  }
+
+  function createPagination(){
+    document.getElementById("previous").style.display = 'inline';
+    document.getElementById("next").style.display = 'inline';
+
+}
 
 
 </script>
@@ -34,10 +76,18 @@ for(let i=1; i < numExperts; i++){
 <template>
   <TheNavigation></TheNavigation>
 
-  <!--<div v-if="experts">
+  <body onload="start();">
+  <div v-if="expert">
     <h1 class="title is-flex is-justify-content-center m-4 mb-5">Study Sets</h1>
     <div class="container is-fluid is-flex is-flex-wrap-wrap is-justify-content-center">
-      is-flex is-justify-content-center"
+          <div class="set card m-1 mb-2">
+            <!--<img :src="`/images/${expert.image}`" :alt="expert.name">-->
+            <h2 class="is-flex is-justify-content-center pb-2 title is-6">{{ expert.name }}</h2>
+          </div>
+    </div>
+    <!--<div v-if="experts">
+    <h1 class="title is-flex is-justify-content-center m-4 mb-5">Study Sets</h1>
+    <div class="container is-fluid is-flex is-flex-wrap-wrap is-justify-content-center">
       <span v-for="expert in experts" :key="expert.id">
           <div class="set card m-1 mb-2">
             <img :src="`/images/${expert.image}`" :alt="expert.name">
@@ -45,9 +95,16 @@ for(let i=1; i < numExperts; i++){
           </div>
         
       </span>
+    </div>-->
+    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+      <a class="pagination-previous button mb-3 mx-1" id="previous">Previous</a>
+      <a class="pagination-next button mb-3 mx-1" id="next">Next page</a>
+      <ul class="pagination-list mb-2" id="pagination">
+       
+      </ul></nav>
     </div>
+</body>
 
     <TheFooter class="mt-3"></TheFooter>
 
-  <LoadingAnimation v-else></LoadingAnimation>-->
 </template>

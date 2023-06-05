@@ -21,6 +21,9 @@ export default {
   },
   getExpert(expertID) {
     return apiClient.get('/experts/' + expertID)
+  },
+  getExpertsbySubject(subject){
+    return apiClient.get('/experts/subject/' + subject)
   }
 }
 

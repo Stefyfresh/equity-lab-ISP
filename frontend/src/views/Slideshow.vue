@@ -5,7 +5,7 @@ import { ref, onMounted } from 'vue'
 import StudySetInfo from '@/services/StudySetInfo.js'
 import LoadingAnimation from '@/components/LoadingAnimation.vue';
 
-const experts = ref(null);
+// const experts = ref(null);
 let expert = ref(null);
 let currExpert = 1;
 let numExperts = 2;
@@ -13,32 +13,34 @@ let numExperts = 2;
 const props = defineProps({
   name: {
     required: true,
+  },
+  subjectID: {
+    required: true,
   }
 })
 
 onMounted(() => {
-  StudySetInfo.getExpertsbySubject(props.name)
-    .then((response) => {
-      experts.value = response.data
-    })
-    .catch((error) => {
-      console.log(error)
-    })
-})
+  createPagination();
+  showPage(currExpert);
 
+  // StudySetInfo.getExpertsbySubject(props.name)
+  //   .then((response) => {
+  //     experts.value = response.data
+  //   })
+  //   .catch((error) => {
+  //     console.error(error)
+  //   })
+});
 
 
 function showPage(expertID) {
-  onMounted(() => {
-    StudySetInfo.getExpert(expertID)
-      .then((response) => {
-        expert.value = response.data
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-  })
-  expert = ref(null);
+  StudySetInfo.getExpert(expertID)
+    .then((response) => {
+      expert.value = response.data
+    })
+    .catch((error) => {
+      console.error(error)
+    });
 }
 
 function btnPrevious() {
@@ -56,12 +58,6 @@ function btnNext() {
   }
 }
 
-
-function start() {
-  createPagination();
-  showPage(currPage);
-}
-
 function createPagination() {
   document.querySelector("#previous").addEventListener("click", btnPrevious);
   document.querySelector("#next").addEventListener("click", btnNext);
@@ -69,7 +65,6 @@ function createPagination() {
   document.querySelector("#previous").style.display = 'inline';
   document.querySelector("#next").style.display = 'inline';
 }
-
 
 </script>
 

@@ -133,6 +133,15 @@ app.get(`/experts/:id`, (req, res) => {
     })();
 });
 
+app.get(`/experts/:subject`, (req, res) => {
+    if (db == null) res.status(500).send("ERROR: Server is starting.");
+    else
+    (async function () {
+        query = await db.collection("experts").find({ subject: parseInt(req.params.subject) }).toArray();
+        // Change the {} if we need to return something other than an empty object when id doesn't exist
+        res.send(query ? query : {}); 
+    })();
+});
 
 
 // Set up base route

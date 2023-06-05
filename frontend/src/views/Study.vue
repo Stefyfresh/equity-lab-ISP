@@ -38,11 +38,13 @@ onMounted(() => {
     <div class="container">
       <div class="columns">
         <div class="column is-flex is-justify-content-center">
+          <router-link :to="{ name: 'slideshow', params: { subjectID: subject.subjectID, name:subject.name } }">
           <div class="card activity is-flex is-justify-content-center is-flex-direction-column">
             <img :src="`/images/learnicon.webp`" :alt="learn">
             <h2 class="is-flex is-justify-content-center p-2 title is-4">Learn</h2>
-
           </div>
+        </router-link> 
+
 
         </div>
         <div class="column is-two-thirds is-flex is-flex-direction-row is-justify-content-center">

@@ -53,6 +53,12 @@ const routes = [
         component: () => import('@/views/Study.vue'),
     },
     {
+        path: '/study/:subjectID/:name',
+        name: 'slideshow',
+        props: true,
+        component: () => import('@/views/Slideshow.vue'),
+    },
+    {
         path: '/callback',
         name: 'callback',
         component: () => import('@/views/Loading.vue'),

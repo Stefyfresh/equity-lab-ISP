@@ -15,6 +15,12 @@ export default {
   },
   getSubject(subjectID) {
     return apiClient.get('/subjects/' + subjectID)
+  },
+  getExperts() {
+    return apiClient.get('/experts')
+  },
+  getExpert(expertID) {
+    return apiClient.get('/experts/' + expertID)
   }
 }
 

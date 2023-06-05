@@ -40,21 +40,21 @@ onMounted(() => {
             <div class="navbar-menu topheight" id="main-nav">
                 <div class="navbar-end">
                     <span class="navbar-item">
-                        <RouterLink to="about">
+                        <RouterLink to="/about">
                             <button class="button is-dark is-inverted">
                                 <span>About</span>
                             </button>
                         </RouterLink>
                     </span>
                     <span class="navbar-item">
-                        <RouterLink to="study">
+                        <RouterLink to="/study">
                             <button class="button is-dark is-inverted">
                                 <span>Study</span>
                             </button>
                         </RouterLink>
                     </span>
                     <span class="navbar-item">
-                        <RouterLink to="contact">
+                        <RouterLink to="/contact">
                             <button class="button is-dark is-inverted">
                                 <span>Contact</span>
                             </button>

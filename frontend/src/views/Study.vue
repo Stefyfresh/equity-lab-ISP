@@ -56,6 +56,8 @@ onMounted(() => {
         <img :src="`/images/gameicon.webp`" :alt="game">
         <h2 class="is-flex is-justify-content-center p-2 title is-4">Game 2</h2>
 
+        <!--I know the page looks terrible, we will replace the icons with photos of the games and slideshow-->
+
       </div>
 
       </div>

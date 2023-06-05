@@ -133,7 +133,7 @@ app.get(`/experts/:id`, (req, res) => {
     })();
 });
 
-app.get(`/experts/:subject`, (req, res) => {
+app.get(`/experts/subject/:subject`, (req, res) => {
     if (db == null) res.status(500).send("ERROR: Server is starting.");
     else
     (async function () {

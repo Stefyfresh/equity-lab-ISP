@@ -71,6 +71,11 @@ const routes = [
         beforeEnter: authGuard
     },
     {
+        path: '/logout',
+        name: 'logout',
+        component: () => import('@/views/Logout.vue'),
+    },
+    {
         path: "/:catchAll(.*)",
         name: "Not Found",
         component: () => import('@/views/404NotFound.vue'),

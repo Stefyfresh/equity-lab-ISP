@@ -163,6 +163,16 @@ app.get(`/experts/subject/:subject`, (req, res) => {
     })();
 });
 
+app.get(`/questions/:subject/:id`, (req, res) => {
+    if (db == null) res.status(500).send("ERROR: Server is starting.");
+    else
+    (async function () {
+        let query = await db.collection("questions").find({ subject: req.params.subject.toString(), questionID: parseInt(req.params.id) }).toArray();
+        // Change the {} if we need to return something other than an empty object when id doesn't exist
+        res.send(query ? query : {}); 
+    })();
+});
+
 
 // Set up base route
 app.get('/', (req, res) => {

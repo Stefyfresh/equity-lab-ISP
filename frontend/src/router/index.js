@@ -60,6 +60,12 @@ const routes = [
         component: () => import('@/views/Slideshow.vue'),
     },
     {
+        path: '/study/quiz/:subjectID/:name',
+        name: 'quiz',
+        props: true,
+        component: () => import('@/views/Quiz.vue'),
+    },
+    {
         path: '/callback',
         name: 'callback',
         component: () => import('@/views/Loading.vue'),

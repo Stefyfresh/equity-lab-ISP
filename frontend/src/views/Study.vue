@@ -65,7 +65,7 @@ onMounted(() => {
             </router-link>
         </div>
         <div class="column is-6">
-          <router-link :to="{ name: 'slideshow', params: { subjectID: subject.subjectID, name: subject.name } }">
+          <router-link :to="{ name: 'quiz', params: { subjectID: subject.subjectID, name: subject.name } }">
               <div class="box has-text-centered">
                 <div class="columns">
                   <div class="column is-4 is-offset-4">

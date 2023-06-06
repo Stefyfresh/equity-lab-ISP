@@ -1,17 +1,19 @@
 <script setup>
-import axios from 'axios';
 import { useAuth0 } from "@auth0/auth0-vue";
 import router from "@/router";
+import User from "@/services/User";
 
 let { isAuthenticated, user } = useAuth0();
 
-// WHY IS CODING SO STUPID SOMETIMES AAAAAAAA
+
 async function doThings(user2) {
-   const response = await axios.get("https://api.equitylab.io/users/email/" + user2.email);
-   
+   const user = await User.getUser(user2.email);
    document.querySelector('.doThings').innerHTML = "";
    
-   if (response.data.email == undefined) {
+   sessionStorage.setItem("user", JSON.stringify(user));
+
+
+   if (user.email == undefined) {
       // New user
       router.push('/onboarding');
       

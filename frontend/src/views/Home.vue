@@ -1,9 +1,8 @@
 <script setup>
 import ProfileSidebar from '@/components/ProfileSidebar.vue';
-
+import User from '@/services/User';
 import { useAuth0 } from "@auth0/auth0-vue";
 
-const { user } = useAuth0();
 </script>
 
 <template>
@@ -13,11 +12,11 @@ const { user } = useAuth0();
         </div>
         <div class="column is-9">
             <section class="section profile-section pb-0">
-                <h1 class="title">Welcome back, {{ user.name }}!</h1>
+                <h1 class="title">Welcome back, {{ User.getLocalUser().name }}!</h1>
                 <RouterLink to="/study">
-                <div class="box pb-3 mb-6">
-                    <figure class="image">
-                        <img src="https://www.passerellesnumeriques.org/wp-content/uploads/2022/05/Website-Landing-pages-banner-template-3.png">
+                <div class="box">
+                    <figure class="image is-3by1">
+                        <img src="/images/home_landing.webp">
                     </figure>
                     <h1 class="home-title mt-1 mb-0">Start exploring Equity Lab</h1>
                 </div>

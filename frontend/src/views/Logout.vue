@@ -8,4 +8,5 @@ logout({
         returnTo: window.location.origin,
     }
 });
+sessionStorage.removeItem("user");
 </script>

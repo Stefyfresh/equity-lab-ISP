@@ -27,6 +27,9 @@ export default {
   },
   getExpertsbySubject(subject){
     return apiClient.get('/experts/subject/' + subject)
+  },
+  getQuestionsbySubject(subject, id){
+    return apiClient.get('/questions/' + subject + '/' + id)
   }
 }
 

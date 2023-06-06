@@ -132,7 +132,7 @@ function startclear() {
   <LoadingAnimation v-else></LoadingAnimation>
 </template>
 
-<style>
+<style scoped>
 .set {
   max-width: 400px;
   border-radius: 10px;

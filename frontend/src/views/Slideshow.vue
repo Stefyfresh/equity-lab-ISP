@@ -48,10 +48,10 @@ function btnPrevious() {
     currExpert--;
     disableButtons("neither");
     showPage(currExpert);
-    if(currExpert == 1){
-        disableButtons("previous");
+    if (currExpert == 1) {
+      disableButtons("previous");
     }
-  }else{
+  } else {
     disableButtons("previous");
   }
 }
@@ -62,11 +62,11 @@ function btnNext() {
     currExpert++;
     disableButtons("neither");
     showPage(currExpert);
-    if(currExpert == numExperts){
-        disableButtons("next");
-        nextTask();
+    if (currExpert == numExperts) {
+      disableButtons("next");
+      nextTask();
     }
-  }else{
+  } else {
     disableButtons("next");
   }
 }
@@ -79,25 +79,25 @@ function createPagination() {
   document.querySelector("#next").style.display = 'inline';
 }
 
-function disableButtons(type){
+function disableButtons(type) {
   const previous = document.getElementById("previous");
   const next = document.getElementById("next");
 
-  if(type == "previous"){
+  if (type == "previous") {
     previous.classList.add('is-light');
 
-  }else if(type == "next"){
+  } else if (type == "next") {
     next.classList.add('is-light');
 
-  }else if(type = "neither"){
+  } else if (type = "neither") {
     previous.classList.remove('is-light');
     next.classList.remove('is-light');
   }
 }
 
-function nextTask(){
-    const nextTask = document.getElementById("nextTask");
-    nextTask.classList.remove('hidden');
+function nextTask() {
+  const nextTask = document.getElementById("nextTask");
+  nextTask.classList.remove('hidden');
 }
 
 //hidden router link to go back home
@@ -112,45 +112,44 @@ function nextTask(){
     <div class="container is-fluid is-flex is-flex-wrap-wrap is-justify-content-center">
       <div class="set card m-1 mb-2">
         <div class="columns expertpictures is-flex is-justify-content-center">
-            <div class="column is-flex is-justify-content-center">
-                <img :src="`/images/${expert.image}`" :alt="expert.name">
+          <div class="column is-flex is-justify-content-center">
+            <img :src="`/images/${expert.image}`" :alt="expert.name">
+          </div>
+          <div class="column is-two-thirds is-flex is-align-items-center mb-3 is-justify-content-center">
+            <div>
+              <h2 class="is-flex is-justify-content-center subtitle is-2 mt-2">{{ expert.name }}</h2>
+              <p class="m-4 pb-4 p-2 subtitle is-4">{{ expert.description }}</p>
             </div>
-            <div class="column is-two-thirds is-flex is-align-items-center mb-3 is-justify-content-center">
-                <div>
-                <h2 class="is-flex is-justify-content-center subtitle is-2 mt-2">{{ expert.name }}</h2>
-                <p class="m-4 pb-4 p-2 subtitle is-4">{{ expert.description }}</p>
-            </div>
-            </div>
+          </div>
         </div>
 
       </div>
     </div>
   </div>
   <div class="container is-fluid is-flex mt-3 is-justify-content-center">
-  <nav class="pagination is-centered is-rounded" role="navigation" aria-label="pagination">
-    <a class="pagination-previous button is-medium mb-3 mx-1 is-light" id="previous">Previous</a>
-    <a class="pagination-next button is-medium mb-3 mx-1" id="next">Next page</a>
-    <ul class="pagination-list mb-2" id="pagination">
+    <nav class="pagination is-centered is-rounded" role="navigation" aria-label="pagination">
+      <a class="pagination-previous button is-medium mb-3 mx-1 is-light" id="previous">Previous</a>
+      <a class="pagination-next button is-medium mb-3 mx-1" id="next">Next page</a>
+      <ul class="pagination-list mb-2" id="pagination">
 
-    </ul>
-  </nav>
-</div>
+      </ul>
+    </nav>
+  </div>
 
-<div class="is-flex is-justify-content-center">
-  <router-link :to="{ name: 'studysubject', params: { subjectID: props.subjectID } }">
-        <div class="button is-large is-rounded hidden" id="nextTask">Play a Game to Test Your Knowledge!</div>
+  <div class="is-flex is-justify-content-center">
+    <router-link :to="{ name: 'studysubject', params: { subjectID: props.subjectID } }">
+      <div class="button is-large is-rounded hidden" id="nextTask">Play a Game to Test Your Knowledge!</div>
     </router-link>
-</div>
-  
+  </div>
+
 
 
   <TheFooter class="mt-3"></TheFooter>
-  
 </template>
 
-<style>
-@media(max-width:700px){
-  .expertpictures{
+<style scoped>
+@media(max-width:700px) {
+  .expertpictures {
     display: flex;
     flex-direction: column;
   }
@@ -161,9 +160,4 @@ function nextTask(){
 .hidden {
   display: none;
 }
-
-
-
-
-
 </style>

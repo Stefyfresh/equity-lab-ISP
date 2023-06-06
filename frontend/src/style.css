@@ -57,3 +57,7 @@
 .is-viewport-height {
   height: 100vh;
 }
+
+.select, .select select { 
+  width: 100%;
+  }

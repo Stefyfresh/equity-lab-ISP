@@ -9,9 +9,10 @@ const routes = [
         component: () => import('@/views/Landing.vue'),
     },
     {
-        path: '/login',
-        name: 'login',
-        component: () => import('@/views/Login.vue'),
+        path: '/onboarding',
+        name: 'onboarding',
+        component: () => import('@/views/Onboarding.vue'),
+        beforeEnter: authGuard,
     },
     {
         path: '/about',
@@ -22,19 +23,19 @@ const routes = [
         path: '/home',
         name: 'home',
         component: () => import('@/views/Home.vue'),
-        // beforeEnter: authGuard,
+        beforeEnter: authGuard,
     },
     {
         path: '/profile',
         name: 'profile',
         component: () => import('@/views/Profile.vue'),
-        // beforeEnter: authGuard,
+        beforeEnter: authGuard,
     },
     {
         path: '/leaderboard',
         name: 'leaderboard',
         component: () => import('@/views/Leaderboard.vue'),
-        // beforeEnter: authGuard,
+        beforeEnter: authGuard,
     },
     {
         path: '/contact',
@@ -62,6 +63,12 @@ const routes = [
         path: '/callback',
         name: 'callback',
         component: () => import('@/views/Loading.vue'),
+    },
+    {
+        path: '/post-login',
+        name: 'post-login',
+        component: () => import('@/views/PostLogin.vue'),
+        beforeEnter: authGuard
     },
     {
         path: "/:catchAll(.*)",

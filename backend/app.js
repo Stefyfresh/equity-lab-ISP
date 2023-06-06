@@ -113,6 +113,16 @@ app.get(`/users/email/:email`, (req, res) => {
     })();
 });
 
+app.post(`/users`, (req, res) => {
+    console.log();
+    if (db == null) res.status(500).send("ERROR: Server is starting.");
+    else
+    (async function () {
+        result = await db.collection("users").insertOne(req.body);
+        res.send(result ? result : {}); 
+    })();
+});
+
 app.get(`/subjects/:id`, (req, res) => {
     if (db == null) res.status(500).send("ERROR: Server is starting.");
     else

@@ -143,6 +143,16 @@ app.get(`/subjects/:id`, (req, res) => {
     })();
 });
 
+app.get(`/subjects/name/:name`, (req, res) => {
+    if (db == null) res.status(500).send("ERROR: Server is starting.");
+    else
+    (async function () {
+        let query = await db.collection("subjects").findOne({ name: req.params.name });
+        // Change the {} if we need to return something other than an empty object when id doesn't exist
+        res.send(query ? query : {}); 
+    })();
+});
+
 app.get(`/experts/:id`, (req, res) => {
     if (db == null) res.status(500).send("ERROR: Server is starting.");
     else

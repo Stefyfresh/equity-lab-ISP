@@ -45,6 +45,8 @@ app.use(BodyParser.urlencoded({ extended: true }));
 app.use(logReqErr);
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT,PATCH");
+    res.setHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
     next();
 });
 app.listen(5000, () => {
@@ -98,7 +100,7 @@ app.get(`/students/:id`, (req, res) => {
     if (db == null) res.status(500).send("ERROR: Server is starting.");
     else
     (async function () {
-        query = await db.collection("students").findOne({ studentID: parseInt(req.params.id) });
+        let query = await db.collection("students").findOne({ studentID: parseInt(req.params.id) });
         // Change the {} if we need to return something other than an empty object when id doesn't exist
         res.send(query ? query : {}); 
     })();
@@ -108,17 +110,25 @@ app.get(`/users/email/:email`, (req, res) => {
     if (db == null) res.status(500).send("ERROR: Server is starting.");
     else
     (async function () {
-        query = await db.collection("users").findOne({ email: req.params.email });
+        let query = await db.collection("users").findOne({ email: req.params.email });
         res.send(query ? query : {}); 
     })();
 });
 
 app.post(`/users`, (req, res) => {
-    console.log();
     if (db == null) res.status(500).send("ERROR: Server is starting.");
     else
     (async function () {
-        result = await db.collection("users").insertOne(req.body);
+        let result = await db.collection("users").insertOne(req.body);
+        res.send(result ? result : {}); 
+    })();
+});
+
+app.patch(`/users/email/:email`, (req, res) => {
+    if (db == null) res.status(500).send("ERROR: Server is starting.");
+    else
+    (async function () {
+        let result = await db.collection("users").updateOne({ email: req.params.email }, { $set: req.body });
         res.send(result ? result : {}); 
     })();
 });
@@ -127,7 +137,7 @@ app.get(`/subjects/:id`, (req, res) => {
     if (db == null) res.status(500).send("ERROR: Server is starting.");
     else
     (async function () {
-        query = await db.collection("subjects").findOne({ subjectID: parseInt(req.params.id) });
+        let query = await db.collection("subjects").findOne({ subjectID: parseInt(req.params.id) });
         // Change the {} if we need to return something other than an empty object when id doesn't exist
         res.send(query ? query : {}); 
     })();
@@ -137,7 +147,7 @@ app.get(`/experts/:id`, (req, res) => {
     if (db == null) res.status(500).send("ERROR: Server is starting.");
     else
     (async function () {
-        query = await db.collection("experts").findOne({ expertID: parseInt(req.params.id) });
+        let query = await db.collection("experts").findOne({ expertID: parseInt(req.params.id) });
         // Change the {} if we need to return something other than an empty object when id doesn't exist
         res.send(query ? query : {}); 
     })();
@@ -147,7 +157,7 @@ app.get(`/experts/subject/:subject`, (req, res) => {
     if (db == null) res.status(500).send("ERROR: Server is starting.");
     else
     (async function () {
-        query = await db.collection("experts").find({ subject: req.params.subject.toString() }).toArray();
+        let query = await db.collection("experts").find({ subject: req.params.subject.toString() }).toArray();
         // Change the {} if we need to return something other than an empty object when id doesn't exist
         res.send(query ? query : {}); 
     })();

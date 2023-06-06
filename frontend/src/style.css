@@ -60,4 +60,9 @@
 
 .select, .select select { 
   width: 100%;
-  }
+}
+
+.home-title {
+  font-weight: 400;
+  font-size: 30px;
+}

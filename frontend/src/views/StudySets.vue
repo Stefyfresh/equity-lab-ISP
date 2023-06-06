@@ -5,8 +5,9 @@ import { ref, onMounted } from 'vue'
 import StudySetInfo from '@/services/StudySetInfo.js'
 import LoadingAnimation from '@/components/LoadingAnimation.vue';
 
-const subjects = ref(null)
-const numSubjects = 7;
+const subjects = ref(null);
+const subject = ref(null);
+const numSubjects = 2;
 
 onMounted(() => {
   StudySetInfo.getSubjects()
@@ -21,25 +22,29 @@ onMounted(() => {
 
 function initSearch(){
   document.getElementById("submit").addEventListener("click", checkError);
-  document.getElementById("allteam").addEventListener("click", startclear);
+  document.getElementById("searchterms").addEventListener("click", startclear);
+  document.getElementById("delete").addEventListener("click", errorButtonReverse);
+
 }
 
-function checkError(){
+async function checkError(){
+  console.log(document.getElementById("searchterms").value);
   let available = false;
-  const subject = ref(null);
   for(let i=1; i < numSubjects; i++){
     StudySetInfo.getSubject(i)
     .then((response) => {
       subject.value = response.data
+      if(document.getElementById("searchterms").value == subject.value.name){
+      i=numSubjects;
+      available = true;
+    }
     })
     .catch((error) => {
       console.log(error)
     })
 
-    if(document.getElementById("searchterms").value == subject.name){
-      i=numSubjects;
-      available = true;
-    }
+
+    
   }
   if(available){
     subjects = subject;
@@ -84,6 +89,17 @@ function errorButtonReverse(){
 
 }
 
+function startclear(){
+  StudySetInfo.getSubjects()
+    .then((response) => {
+      subjects.value = response.data
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+    initSearch();
+}
+
 
 
 
@@ -99,10 +115,12 @@ function errorButtonReverse(){
         <button class="button is-light m-2 mb-2 is-rounded" id="clear">Clear</button>
       </div>
     </div>
+
     <article id="errormsgouter" class="is-flex is-align-items-center is-flex-direction-row">
       <div id="errormsg"></div>
       <button class="delete mr-5 hidden" id="delete"></button>
     </article>
+
 
   
   <div v-if="subjects">
@@ -142,6 +160,17 @@ function errorButtonReverse(){
 .search{
   width: 60%;
 }
+
+.hidden {
+  display: none;
+}
+
+#errormsgouter{
+  max-width:575px;
+}
+
+
+
 
 </style>
   

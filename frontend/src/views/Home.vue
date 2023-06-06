@@ -12,7 +12,7 @@ const { user } = useAuth0();
             <ProfileSidebar />
         </div>
         <div class="column is-9">
-            <section class="section profile-section">
+            <section class="section profile-section pb-0">
                 <h1 class="title">Welcome back, {{ user.name }}!</h1>
                 <div class="box">
                     <figure class="image is-3by1">

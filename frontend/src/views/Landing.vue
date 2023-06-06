@@ -20,7 +20,7 @@ import TheFooter from '@/components/TheFooter.vue';
             </div>
     </header>
     <section class="section is-small has-background-white has-text-centered">
-        <div class="title">What students think about Equity Lab</div>
+        <div class="title">What students and teachers think about Equity Lab</div>
         <div class="columns">
             <div class="column">
                 <div class="box has-text-centered">

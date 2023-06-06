@@ -28,44 +28,64 @@ onMounted(() => {
 
 <template>
   <TheNavigation></TheNavigation>
-
   <span v-if="subject">
-    <h1 class="title is-flex is-justify-content-center m-4 mb-5">{{ subject.name }}</h1>
-    <div class="container is-flex is-justify-content-center mb-5">
-      <p>{{ subject.description }}</p>
-    </div>
-
-    <div class="container">
-      <div class="columns">
-        <div class="column is-flex is-justify-content-center">
-          <router-link :to="{ name: 'slideshow', params: { subjectID: subject.subjectID, name: subject.name } }">
-          <div class="card activity is-flex is-justify-content-center is-flex-direction-column">
-            <img :src="`/images/learnicon.webp`" :alt="learn">
-            <h2 class="is-flex is-justify-content-center p-2 title is-4">Learn</h2>
-          </div>
-        </router-link> 
-
-
+    <header class="header">
+      <div class="columns is-gapless has-background-light">
+        <div class="column is-4">
+          <img :src="`/images/${subject.image}`" :alt="subject.name">
         </div>
-        <div class="column is-two-thirds is-flex is-flex-direction-row is-justify-content-center">
-          <div class="card activity is-flex is-justify-content-center is-flex-direction-column mr-4">
-            <img :src="`/images/gameicon.webp`" :alt="game">
-            <h2 class="is-flex is-justify-content-center p-2 title is-4">Game 1</h2>
-
+        <div class="column has-background-light">
+          <div class="columns">
+            <div class="column is-6 ml-6 pl-6">
+              <h1 class="subject-text">{{ subject.name }}</h1>
+              <h1 class="subtitle">{{ subject.description }}</h1>
+            </div>
           </div>
-
-          <div class="card activity is-flex is-justify-content-center is-flex-direction-column ml-4">
-            <img :src="`/images/gameicon.webp`" :alt="game">
-            <h2 class="is-flex is-justify-content-center p-2 title is-4">Game 2</h2>
-
-          </div>
-
+        </div>
+      </div>
+    </header>
+    <div class="section">
+      <div class="columns">
+        <div class="column is-6">
+          <router-link :to="{ name: 'slideshow', params: { subjectID: subject.subjectID, name: subject.name } }">
+              <div class="box has-text-centered">
+                <div class="columns">
+                  <div class="column is-4 is-offset-4">
+                    <figure class="image">
+                <img :src="`/images/learnicon.webp`">
+              </figure>
+                  </div>
+                </div>
+                <div class="columns">
+                  <div class="column">
+                    <h1 class="subtitle">LEARN</h1>
+                  </div>
+                </div>
+              </div>
+            </router-link>
+        </div>
+        <div class="column is-6">
+          <router-link :to="{ name: 'slideshow', params: { subjectID: subject.subjectID, name: subject.name } }">
+              <div class="box has-text-centered">
+                <div class="columns">
+                  <div class="column is-4 is-offset-4">
+                    <figure class="image">
+                <img :src="`/images/gameicon.webp`">
+              </figure>
+                  </div>
+                </div>
+                <div class="columns">
+                  <div class="column">
+                    <h1 class="subtitle">PLAY GAME</h1>
+                  </div>
+                </div>
+              </div>
+            </router-link>
         </div>
       </div>
     </div>
     <TheFooter class="mt-3"></TheFooter>
   </span>
-
   <LoadingAnimation v-else></LoadingAnimation>
 </template>
 
